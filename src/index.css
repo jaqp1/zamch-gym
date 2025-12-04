@@ -1,25 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-navbar-title: "Outfit", sans-serif;
+}
+
 
 html{
   scroll-behavior: smooth;
 }
 
-*{
-  font-family: "Poppins", sans-serif;
-}
-
-span{
-  font-family: inherit;
-  font-weight: inherit;
-
-}
-.shadow-scheme1-shadow{
-  box-shadow: 3px 3px 0 0 #8f9bbc;
-}
-
-.shadow-scheme1-shadow:hover{
-  transform: translate(-3px, -3px);
-  box-shadow: 6px 6px 0 0 #8f9bbc;
+body{
+  background-color: #8f9bbc;
 }
