@@ -19,23 +19,23 @@ export const SCHEMES = {
 }
 
 export const WORKOUTS = {
-    individual: ['biceps', 'triceps', 'chest', 'back', 'shoulders', 'quads', 'hamstrings', 'glutes', 'calves', 'abs'],
+    individual: ['bicepsy', 'tricepsy', 'klatka', 'plecy', 'barki', 'czworogłowe', 'dwugłowe', 'pośladki', 'łydki', 'brzuch'],
     bro_split: {
-        push: ['triceps', 'chest', 'shoulders'],
-        pull: ['back', 'shoulders', 'biceps'],
-        legs: ['glutes', 'calves', 'hamstrings', 'quads']
+        push: ['tricepsy', 'klatka', 'barki'],
+        pull: ['plecy', 'barki', 'bicepsy'],
+        legs: ['pośladki', 'łydki', 'dwugłowe', 'czworogłowe']
     },
     bodybuilder_split: {
-        chest: ['chest'],
-        back: ['back'],
-        shoulders: ['shoulders'],
-        legs: ['glutes', 'quads', 'hamstrings', 'calves'],
-        arms: ['biceps', 'triceps'],
-        abs: ['abs']
+        chest: ['klatka'],
+        back: ['plecy'],
+        shoulders: ['barki'],
+        legs: ['pośladki', 'czworogłowe', 'dwugłowe', 'łydki'],
+        arms: ['bicepsy', 'tricepsy'],
+        abs: ['brzuch']
     },
     upper_lower: {
-        upper: ['triceps', 'biceps', 'shoulders', 'chest', 'back'],
-        lower: ['quads', 'calves', 'hamstrings', 'glutes']
+        upper: ['tricepsy', 'bicepsy', 'barki', 'klatka', 'plecy'],
+        lower: ['czworogłowe', 'łydki', 'dwugłowe', 'pośladki']
     }
 }
 
@@ -54,14 +54,14 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         variants: {
-            incline: 'With a bench inclined between 30 and 45 degrees, hold the bar directly above your chest.',
-            flat: 'Perform this exercise on a horizontal bench.',
-            decline: 'Perform this exercise on a bench inclined at a -15 degree angle, your head at the lower end of the bench. Try to hook your legs over the end of the higher end of the bench, so to prevent yourself from slipping.',
-            underhand: 'Lying on a flat bench, grab the bar with a reversed underhand grip, so that you are now holding the barbell thumbs pointing outwards. Be sure to reduce the weight when performing this variation of the exercise.'
+            incline: 'Z ławką ustawioną pod kątem między 30 a 45 stopni, trzymaj sztangę bezpośrednio nad klatką piersiową.',
+            flat: 'Wykonaj to ćwiczenie na ławce poziomej.',
+            decline: 'Wykonaj to ćwiczenie na ławce skośnej ujemnej (-15 stopni), głową w dół. Zablokuj nogi o koniec ławki, aby się nie ześlizgnąć.',
+            underhand: 'Leżąc na ławce poziomej, chwyć sztangę odwrotnym podchwytem, kciukami skierowanymi na zewnątrz. Pamiętaj, aby zmniejszyć ciężar przy wykonywaniu tego wariantu.'
         },
         unit: 'reps', //vs duration
-        muscles: ['chest'],
-        description: 'Ensure your scapula are retracted when performing the bench press, arms 2 palm widths wider than shoulder width. Lower the bar with your elbows flared at a 45 degree angle from your torso, touching the bar down to your chest at your nipple line.',
+        muscles: ['klatka'],
+        description: 'Upewnij się, że łopatki są ściągnięte. Chwyć sztangę na szerokość o dwie dłonie szerszą niż barki. Opuszczaj sztangę z łokciami odwiedzionymi pod kątem 45 stopni od tułowia, dotykając klatki piersiowej na linii sutków.',
         substitutes: ['pushups', 'dumbbell bench press', 'floor press']
         //have general description first and specific one second
     },
@@ -73,13 +73,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            incline: 'Press your hands away from you at a 45 degree angle above horizontal.',
-            horizontal: 'Press your hands away from you at a 45 degree angle from horizontal.',
-            decline: 'Press your hands away from you at a -30 degree angle below horizontal.'
+            incline: 'Wypychaj dłonie od siebie pod kątem 45 stopni w górę od poziomu.',
+            horizontal: 'Wypychaj dłonie od siebie poziomo, pod kątem 45 stopni.',
+            decline: 'Wypychaj dłonie od siebie w dół, pod kątem -30 stopni poniżej poziomu.'
         },
         unit: 'reps', //vs duration        
-        muscles: ['chest'],
-        description: 'Place a light, weighted plate between the palms of your hands (as if your were praying), and while keeping your scapula retracted, press your hands together while pushing the plate away from you.',
+        muscles: ['klatka'],
+        description: 'Umieść lekki talerz obciążeniowy między dłońmi (jak przy modlitwie) i utrzymując ściągnięte łopatki, ściskaj dłonie razem, jednocześnie wypychając talerz od siebie.',
         substitutes: ['palm prayer press']
     },
     pec_dec: {
@@ -90,13 +90,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            high: 'Place the seat height so that your hands meet in the same horizontal plane as your mouth/chin.',
-            standard: 'Place the seat height so that your hands meet in the same horizontal plane as your nipple height',
-            decline: 'Place the seat height as high as possible so that the hand holds are below nipple height while sitting.'
+            high: 'Ustaw wysokość siedziska tak, aby dłonie spotykały się w tej samej płaszczyźnie poziomej co usta/broda.',
+            standard: 'Ustaw wysokość siedziska tak, aby dłonie spotykały się w tej samej płaszczyźnie poziomej co sutki.',
+            decline: 'Ustaw siedzisko jak najwyżej, aby uchwyty znajdowały się poniżej linii sutków podczas siedzenia.'
         },
         unit: 'reps', //vs duration        muscles: ['chest'],        
-        muscles: ['chest'],
-        description: 'Ensure your scapula is retracted and try to puff our your chest while performing this exercise. Make sure you bring the handles together so they touch, and the range of motion should be no more than 90 degrees either side.',
+        muscles: ['klatka'],
+        description: 'Upewnij się, że łopatki są ściągnięte i staraj się wypiąć klatkę piersiową podczas wykonywania ćwiczenia. Zbliżaj uchwyty do siebie, aż się zetkną; zakres ruchu nie powinien przekraczać 90 stopni na stronę.',
         substitutes: ['cable chest fly']
     },
     standing_dumbbell_incline_fly: {
@@ -107,8 +107,8 @@ export const EXERCISES = {
             equipment: ['dumbbells', 'bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest', 'shoulders'],
-        description: 'Standing with a dumbbell in either hand, palms facing forwards and chest puffed out, raise one dumbbell up and across your body until your palm is facing the ceiling and your hand has crossed your body. Lower slowing and repeat on the other side.',
+        muscles: ['klatka', 'barki'],
+        description: 'Stojąc z hantlami w dłoniach, dłonie skierowane do przodu, klatka wypięta. Unoś jeden hantel w górę i w poprzek ciała, aż dłoń będzie skierowana do sufitu i przekroczy linię środkową ciała. Powoli opuść i powtórz na drugą stronę.',
         substitutes: ['inclined cable fly']
     },
     standing_plate_raises: {
@@ -119,8 +119,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest', 'shoulders'],
-        description: 'Standing with a weighted plate gripped eitherside, start with the plate down infront of your hips, and then raise the plate up infront of you to shoulder height, pausing at that height for a moment, before lowering the weight back down. Puff your chest up towards the ceiling while performing this exercise.',
+        muscles: ['klatka', 'barki'],
+        description: 'Stojąc i trzymając talerz obciążeniowy po bokach, zacznij z talerzem opuszczonym przed biodrami, a następnie unieś go przed siebie do wysokości barków, zatrzymując na chwilę, po czym opuść ciężar. Wypinaj klatkę piersiową w stronę sufitu podczas tego ćwiczenia.',
         substitutes: ['standing dumbbell inline fly']
     },
     cable_fly: {
@@ -131,13 +131,13 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         variants: {
-            incline: 'To target your upper chest, ensure the cable fixing is low, close to the ground. Your hands will move from low at your sides, to high, up infront of your face.',
-            horizontal: 'Ensure the cabling fixing is at approximately chest height while performing this exercise.',
-            decline: 'Set the cable fixing to the highest setting, so your hands move from high to low (as they come together infront of you) throughout the motion.'
+            incline: 'Aby zaangażować górną część klatki, zamocuj wyciąg nisko, przy podłodze. Dłonie będą poruszać się od dołu (przy biodrach) w górę, przed twarz.',
+            horizontal: 'Upewnij się, że mocowanie wyciągu jest mniej więcej na wysokości klatki piersiowej.',
+            decline: 'Ustaw wyciąg na najwyższym poziomie, tak aby dłonie poruszały się z góry na dół (spotykając się przed tobą).'
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'This exercise can be performed from high to low, or low to high. Using the handles and with your arms mostly straight, bring the two handles together in front of you, and then slowly release backwards.',
+        muscles: ['klatka'],
+        description: 'To ćwiczenie można wykonywać z góry na dół lub z dołu na górę. Używając uchwytów i trzymając ramiona niemal wyprostowane, złącz dłonie przed sobą, a następnie powoli rozluźnij ruch w tył.',
         substitutes: ['Inclined dumbbell fly']
     },
     pushup: {
@@ -148,13 +148,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            incline: 'To perform the inline pushup, ensure your feet are atop of a slightly elevated surface, while your hands are on the ground.',
-            military: 'Ensure your hands are in the same vertical plane as your chest and shoulders',
-            decline: 'To perform a decline pushup, place your hands slightly further underneath you, so that you are leaning over your hands and they are closer towards the line of your waist, that your shoulders.'
+            incline: 'Aby wykonać pompkę skośną dodatnią, oprzyj ręce na podwyższeniu, stopy na ziemi.',
+            military: 'Upewnij się, że dłonie znajdują się w tej samej pionowej płaszczyźnie co klatka i barki.',
+            decline: 'Aby wykonać pompkę skośną ujemną, umieść stopy na podwyższeniu. Dłonie ustaw nieco głębiej pod sobą, bliżej linii talii niż barków.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'In a plank position, with hands slightly further than shoulder width apart (and thumbs around nipple height), slowly lower your chest to the ground, keeping elbows flared to a 45 degree angle. Then press back up.',
+        muscles: ['klatka'],
+        description: 'W pozycji deski (plank), z dłońmi nieco szerzej niż barki (kciuki na wysokości sutków), powoli opuść klatkę do ziemi, trzymając łokcie pod kątem 45 stopni. Następnie wypchnij się w górę.',
         substitutes: ['pushups', 'dumbbell bench press', 'floor press']
     },
     dips: {
@@ -165,8 +165,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest', 'triceps'],
-        description: 'When in the dip position, ensure you are leaning forward over your hands and slowly lower your body until your elbows are parallel with the ground. Then press back up. Keep your elbow flare to a maximum of 45 degrees.',
+        muscles: ['klatka', 'tricepsy'],
+        description: 'W pozycji na poręczach, pochyl się do przodu nad dłońmi i powoli opuszczaj ciało, aż łokcie będą równoległe do podłoża. Następnie wypchnij się w górę. Odwodzenie łokci maksymalnie do 45 stopni.',
         substitutes: ['Chair dip']
     },
     // incline_barbell_bench: {
@@ -211,19 +211,19 @@ export const EXERCISES = {
             equipment: ['dumbbell']
         },
         variants: {
-            incline: 'Perform this exercise on a bench inclined to 30 degrees.',
-            horizontal: 'Perform this exercise on a flat bench.',
-            decline: 'Perform this exercise on a bench declined by around 15 degrees, with your head resting at the lower end.',
-            neutral_grip_incline: 'Perform this exercise on a bench inclined to 30 degrees. Align the dumbbells so that they are parallel to one another, your thumbs able to point along the length of your body.',
-            neutral_grip_horizontal: 'Perform this exercise on a flat bench. Align the dumbbells so that they are parallel to one another, your thumbs able to point along the length of your body.',
-            neutral_grip_decline: 'Perform this exercise on a bench declined by around 15 degrees, with your head resting at the lower end. Align the dumbbells so that they are parallel to one another, your thumbs able to point along the length of your body.',
-            rotating_incline: 'Perform this exercise on a bench inclined to 30 degrees. Begin the movement with the dumbbells up above your chest, thumbs pointing towards eachother, and as you lower them either side of your chest, rotate the dumbbells so that your thumbs rotate to point up your body in the direction of your head, making the dumbbells parallel to each other. As you press back up, rotate them back to the original position.',
-            rotating_horizontal: 'Perform this exercise on a flat bench. Begin the movement with the dumbbells up above your chest, thumbs pointing towards eachother, and as you lower them either side of your chest, rotate the dumbbells so that your thumbs rotate to point up your body in the direction of your head, making the dumbbells parallel to each other. As you press back up, rotate them back to the original position.',
-            rotating_decline: 'Perform this exercise on a bench declined by around 15 degrees, with your head resting at the lower end. Begin the movement with the dumbbells up above your chest, thumbs pointing towards eachother, and as you lower them either side of your chest, rotate the dumbbells so that your thumbs rotate to point up your body in the direction of your head, making the dumbbells parallel to each other. As you press back up, rotate them back to the original position.',
+            incline: 'Wykonaj to ćwiczenie na ławce skośnej (30 stopni).',
+            horizontal: 'Wykonaj to ćwiczenie na ławce płaskiej.',
+            decline: 'Wykonaj to ćwiczenie na ławce skośnej ujemnej (ok. 15 stopni), głową w dół.',
+            neutral_grip_incline: 'Ławka skośna (30 stopni). Ustaw hantle równolegle do siebie, kciuki skierowane wzdłuż ciała.',
+            neutral_grip_horizontal: 'Ławka płaska. Ustaw hantle równolegle do siebie, kciuki skierowane wzdłuż ciała.',
+            neutral_grip_decline: 'Ławka skośna ujemna (ok. 15 stopni). Ustaw hantle równolegle do siebie, kciuki skierowane wzdłuż ciała.',
+            rotating_incline: 'Ławka skośna (30 stopni). Zacznij z hantlami nad klatką, kciuki do siebie. Opuszczając, rotuj hantle tak, by kciuki wskazywały w stronę głowy (równolegle). Wypychając, wróć do pozycji wyjściowej.',
+            rotating_horizontal: 'Ławka płaska. Zacznij z hantlami nad klatką, kciuki do siebie. Opuszczając, rotuj hantle tak, by kciuki wskazywały w stronę głowy. Wypychając, wróć do rotacji.',
+            rotating_decline: 'Ławka skośna ujemna. Zacznij z hantlami nad klatką, kciuki do siebie. Opuszczając, rotuj hantle tak, by kciuki wskazywały w stronę głowy. Wypychając, wróć do rotacji.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'With your scapula retracted, hold the dumbbells directly above your chest with your hands slightly wider than shoulder width apart. Lower the dumbbells, keeping elbows to a maximum 45 degree flare, until the your thumbs can touch your nipples/or are at the same height as your nipples, keeping your elbows flared at 45 degrees from your torso. Then press back up.',
+        muscles: ['klatka'],
+        description: 'Ze ściągniętymi łopatkami trzymaj hantle nad klatką, dłonie nieco szerzej niż barki. Opuszczaj hantle, trzymając łokcie pod kątem maks. 45 stopni, aż kciuki dotkną sutków lub znajdą się na ich wysokości. Następnie wypchnij w górę.',
         substitutes: ['pushup', 'bench press']
     },
     // decline_pushup: {
@@ -251,12 +251,12 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            unilateral: 'Stand with the end of a tbar in one hand with your thumb near to your shoulder and your body at a 45 degree to the plane of the bar. Press the bar up and across your chest until your arm is extended and lower back down.',
-            two_handed: 'Hold the end of the barbell with both hands, the barbell pointing directly away from your body, and press the barbell forwards and up until your hands are straight, then slowly lower it back towards your body.',
+            unilateral: 'Stój trzymając koniec sztangi w jednej ręce, kciuk blisko barku, ciało ustawione pod kątem 45 stopni do linii sztangi. Wypchnij sztangę w górę i w poprzek klatki, aż ramię będzie wyprostowane, a następnie opuść.',
+            two_handed: 'Trzymaj koniec sztangi obiema rękami, sztanga skierowana prosto od ciebie. Wypchnij sztangę do przodu i w górę do wyprostu ramion, następnie powoli opuść w stronę ciała.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'Pin the end of a barbell into a ball-joint restraint or corner in the ground. Load any weight on the opposite end of the barbell. Standing behind the loaded end of the barbell, lift the one end so it starts off at chest height.',
+        muscles: ['klatka'],
+        description: 'Zablokuj jeden koniec sztangi w uchwycie landmine lub w rogu ściany. Załóż obciążenie na drugi koniec. Stojąc za obciążonym końcem, unieś go tak, by startować z wysokości klatki piersiowej.',
         substitutes: ['prayer press']
     },
     chest_press: {
@@ -267,14 +267,14 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            high: 'Place the seat height so that your hands move in the same horizontal plane as your mouth/chin.',
-            standard: 'Place the seat height so that your hands move in the same horizontal plane as your nipple height',
-            decline: 'Place the seat height as high as possible so that the hand holds are below nipple height while sitting.',
-            unilateral: 'Adjust the seat so the handles are approximately mid-chest level. Turn your torso 30 to 45 degrees towards the side you are about to press with. Press the handle across your body. Repeat on both sides.'
+            high: 'Ustaw siedzisko tak, aby dłonie poruszały się w płaszczyźnie ust/brody.',
+            standard: 'Ustaw siedzisko tak, aby dłonie poruszały się w płaszczyźnie sutków.',
+            decline: 'Ustaw siedzisko jak najwyżej, aby uchwyty znajdowały się poniżej linii sutków.',
+            unilateral: 'Ustaw siedzisko tak, by uchwyty były na wysokości środka klatki. Skręć tułów o 30-45 stopni w stronę ręki wykonującej ruch. Wypychaj uchwyt w poprzek ciała. Powtórz na obie strony.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'Begin with your chest puffed and your scapula down and retracted. Press the handles out until your arms are straight. Then slow release backwards.',
+        muscles: ['klatka'],
+        description: 'Zacznij z wypiętą klatką i ściągniętymi łopatkami. Wypychaj uchwyty do wyprostu ramion. Powoli wracaj do pozycji wyjściowej.',
         substitutes: ['bench press', 'pushup']
     },
     // smith_machine_incline_press: {
@@ -302,14 +302,14 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            incline: 'With a bench inclined between 30 and 45 degrees, hold the bar directly above your chest.',
-            flat: 'Perform this exercise on a horizontal bench.',
-            decline: 'Perform this exercise on a bench inclined at a -15 degree angle, your head at the lower end of the bench. Try to hook your legs over the end of the higher end of the bench, so to prevent yourself from slipping.',
-            underhand: 'Lying on a flat bench, grab the bar with a reversed underhand grip, so that you are now holding the barbell thumbs pointing outwards. Be sure to reduce the weight when performing this variation of the exercise.'
+            incline: 'Z ławką ustawioną pod kątem 30-45 stopni, trzymaj sztangę bezpośrednio nad klatką.',
+            flat: 'Wykonaj to ćwiczenie na ławce płaskiej.',
+            decline: 'Wykonaj to ćwiczenie na ławce skośnej ujemnej (-15 stopni), głową w dół. Zablokuj nogi, aby się nie zsunąć.',
+            underhand: 'Na ławce płaskiej, chwyć gryf odwrotnym podchwytem (kciuki na zewnątrz). Zmniejsz ciężar przy tym wariancie.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'Lying under a smith machine, ensure that the bar is aligned with your nipple height when it contacts your body. Keep elbows flared to a maximum of 45 degrees from your torso, hands slightly wider than shoulder width.',
+        muscles: ['klatka'],
+        description: 'Leżąc pod maszyną Smitha, upewnij się, że gryf jest w linii z sutkami w dolnej fazie ruchu. Łokcie odwiedzione maksymalnie na 45 stopni od tułowia, dłonie nieco szerzej niż barki.',
         substitutes: ['bench press', 'pushup', 'dumbbell press']
     },
     // unilateral_chest_press: {
@@ -337,13 +337,13 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         variants: {
-            incline: 'To target your upper chest, ensure the cable fixing is low, close to the ground. Your hand will move from low at your side, to high, up infront of your face. Use an underhand grip for this movement.',
-            horizontal: 'Ensure the cabling fixing is at approximately chest height while performing this exercise. Hold the cable in a neutral or overhand grip.',
-            decline: 'Set the cable fixing to the highest setting, so your hand moves from high to low throughout the motion.'
+            incline: 'Aby celować w górną klatkę, zamocuj wyciąg nisko. Ręka porusza się od dołu (przy boku) w górę, przed twarz. Użyj podchwytu.',
+            horizontal: 'Ustaw wyciąg mniej więcej na wysokości klatki piersiowej. Trzymaj uchwyt chwytem neutralnym lub nachwytem.',
+            decline: 'Ustaw wyciąg na najwyższym poziomie, ręka porusza się z góry na dół.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'Align your body at a 30 to 45 degree plane to the cable. Press the cable handle across your body until your elbow is straight and slowly release backwards. Ensure elbows are tucked during the exercise.',
+        muscles: ['klatka'],
+        description: 'Ustaw ciało pod kątem 30-45 stopni do wyciągu. Wypychaj uchwyt w poprzek ciała do wyprostu łokcia, powoli wracaj. Trzymaj łokieć blisko ciała podczas ruchu.',
         substitutes: ['unilateral chest press']
     },
     cable_crossover_press: {
@@ -354,13 +354,13 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         variants: {
-            incline: 'To target your upper chest, ensure the cable fixing is low, close to the ground. Your hands will move from low at your sides, to high, up infront of your face.',
-            horizontal: 'Ensure the cabling fixing is at approximately chest height while performing this exercise.',
-            decline: 'Set the cable fixing to the highest setting, so your hands move from high to low (as they come together infront of you) throughout the motion.'
+            incline: 'Aby celować w górną klatkę, zamocuj wyciąg nisko. Dłonie poruszają się od dołu w górę, przed twarz.',
+            horizontal: 'Ustaw wyciąg mniej więcej na wysokości klatki piersiowej.',
+            decline: 'Ustaw wyciąg na najwyższym poziomie, dłonie poruszają się z góry na dół (spotykając się przed tobą).'
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'As if you were doing a pushup or bench press, press the handles together and then crossed over in front of you, alternating the crossover of your hands with each rep.',
+        muscles: ['klatka'],
+        description: 'Jak przy pompce lub wyciskaniu, wypychaj uchwyty do przodu, krzyżując dłonie przed sobą w szczytowej fazie (zmieniaj rękę na wierzchu z każdym powtórzeniem).',
         substitutes: ['cable fly', 'unilateral chest press']
     },
     scapula_pushup: {
@@ -371,8 +371,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'While in a plank or kneeling plank position, with your hands aligned at approximately eye height on the ground, press yourself away from the ground. Then allow your body to come back down to the ground, keeping your elbows straight and the inside of your elbow facing forward at all times.',
+        muscles: ['klatka'],
+        description: 'W pozycji deski (plank) lub na kolanach, dłonie na wysokości oczu na ziemi. Odepchnij się od ziemi (zaokrąglając górne plecy), a następnie pozwól ciału opaść (ściągając łopatki), utrzymując łokcie proste przez cały czas. Wnętrze łokci skierowane do przodu.',
         substitutes: ['pushup']
     },
     dumbbell_chest_fly: {
@@ -383,13 +383,13 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         variants: {
-            incline: 'With a bench inclined between 30 and 45 degrees, hold the dumbbells directly above your chest.',
-            flat: 'Perform this exercise on a horizontal bench.',
-            decline: 'Perform this exercise on a bench inclined at a -15 degree angle, your head at the lower end of the bench. Try to hook your legs over the end of the higher end of the bench, so to prevent yourself from slipping.',
+            incline: 'Ławka skośna (30-45 stopni), hantle nad klatką.',
+            flat: 'Wykonaj na ławce płaskiej.',
+            decline: 'Ławka skośna ujemna (-15 stopni), głowa w dół. Zablokuj nogi.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'Holding a dumbbell in each hand directly above your chest, slowly lower the dumbbells to either side of your body while keeping your arms mostly straight, palms to the ceiling. Ensure the weights do not drop lowering than the height of your body.',
+        muscles: ['klatka'],
+        description: 'Trzymając hantle bezpośrednio nad klatką, powoli opuszczaj je na boki, utrzymując ramiona niemal proste (lekko ugięte), dłonie skierowane do sufitu. Nie opuszczaj ciężaru poniżej linii ciała.',
         substitutes: ['cable fly']
     },
     dumbbell_floor_press: {
@@ -400,8 +400,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'Lying on your back with your scapula retracted, and the dumbbells starting over your chest, lower each side back down with elbows flared to a 45 degree angle until your elbows touch the ground. Then press back up.',
+        muscles: ['klatka'],
+        description: 'Leżąc na plecach ze ściągniętymi łopatkami, hantle nad klatką. Opuszczaj ciężar, łokcie pod kątem 45 stopni, aż dotkną podłogi. Następnie wypchnij w górę.',
         substitutes: ['dumbbell bench press']
     },
     barbell_floor_press: {
@@ -412,8 +412,8 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest'],
-        description: 'Lying with your scapula retracted, and the barbell starting over your chest, lower the barbell down towards nipple level, elbows flared to a 45 degree angle until your elbows touch the ground. Then press back up.',
+        muscles: ['klatka'],
+        description: 'Leżąc ze ściągniętymi łopatkami, sztanga nad klatką. Opuszczaj sztangę w kierunku sutków, łokcie pod kątem 45 stopni, aż dotkną podłogi. Następnie wypchnij w górę.',
         substitutes: ['barbell bench press']
     },
     dumbbell_pullover: {
@@ -424,8 +424,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['chest', 'back'],
-        description: 'Lying holding a single dumbbell as if it were a goblet directly above your chest, slowly track the dumbbell back over your head, keeping your elbows tucked. Track back as far as comfortable behind your head, and then return to the starting position.',
+        muscles: ['klatka', 'plecy'],
+        description: 'Leżąc, trzymaj pojedynczy hantel oburącz (jak kielich) nad klatką. Powoli przenoś hantel za głowę, trzymając łokcie blisko siebie (nie rozszerzaj ich). Sięgnij tak daleko za głowę, jak to wygodne, a następnie wróć do pozycji startowej.',
         substitutes: ['Inclined dumbbell fly']
     },
     pullup: {
@@ -436,13 +436,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing towards you.',
-            neutral_grip: 'Perform this movement with a neutral grip, palms facing each other.',
-            overhand: 'Perform this movement with a pronated grip, palms facing away from you.'
+            underhand: 'Wykonaj podchwytem (dłonie skierowane do ciebie).',
+            neutral_grip: 'Wykonaj chwytem neutralnym (dłonie skierowane do siebie).',
+            overhand: 'Wykonaj nachwytem (dłonie skierowane od ciebie).'
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Hands approximately shoulder width or slightly wider apart, start by retracting your scapula down and back, and then pull your body up until your chin is above bar height. Then return to a dead hang. Use an assisted pullup machine if required.',
+        muscles: ['plecy'],
+        description: 'Dłonie na szerokość barków lub nieco szerzej. Zacznij od ściągnięcia łopatek w dół i w tył, a następnie podciągnij ciało, aż broda znajdzie się nad drążkiem. Wróć do pełnego zwisu. W razie potrzeby użyj maszyny do podciągania lub gumy.',
         substitutes: ['lat pulldown']
     },
     lat_pulldown: {
@@ -453,13 +453,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing towards you.',
-            neutral_grip: 'Perform this movement with a neutral grip, palms facing each other.',
-            overhand: 'Perform this movement with a pronated grip, palms facing away from you.'
+            underhand: 'Wykonaj podchwytem (dłonie skierowane do ciebie).',
+            neutral_grip: 'Wykonaj chwytem neutralnym (dłonie skierowane do siebie).',
+            overhand: 'Wykonaj nachwytem (dłonie skierowane od ciebie).'
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Hands approximately shoulder width or slightly wider apart, start by retracting your scapula down and back, and then pull the bar down until it touches your chest. Then return to a dead hang position.',
+        muscles: ['plecy'],
+        description: 'Dłonie na szerokość barków lub nieco szerzej. Zacznij od ściągnięcia łopatek w dół i w tył, a następnie ściągnij drążek, aż dotknie klatki piersiowej. Wróć do pełnego wyprostu ramion.',
         substitutes: ['pullup', 'kneeling lat pushdown']
     },
     straight_arm_pushdown: {
@@ -470,8 +470,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Begin with the bar approximately eye level and your arms extended mostly straight out in front of you, press the bar down (maintaining straight arms) until your hands or the bar touches your lower mid-section. Press your chest out and bring your hips through/between your arms (thrust). Release back to origin.',
+        muscles: ['plecy'],
+        description: 'Zacznij z drążkiem na wysokości oczu i ramionami wyprostowanymi przed sobą. Ściągnij drążek w dół (utrzymując proste ramiona), aż dłonie dotkną ud. Wypnij klatkę i lekko wypchnij biodra w przód. Wróć do góry.',
         substitutes: ['pullup', 'kneeling lat pulldown']
     },
     kneeling_lat_pulldown: {
@@ -482,13 +482,13 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing towards you.',
-            neutral_grip: 'Perform this movement with a neutral grip, palms facing each other.',
-            overhand: 'Perform this movement with a pronated grip, palms facing away from you.',
+            underhand: 'Wykonaj podchwytem.',
+            neutral_grip: 'Wykonaj chwytem neutralnym.',
+            overhand: 'Wykonaj nachwytem.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Hands  approximately shoulder width or slightly wider apart, start by retracting your scapula down and back, and then pull the bar down until it touches your chest. Ensure your look at the ceiling throughout the duration of the movement. Then return to a dead hang position.',
+        muscles: ['plecy'],
+        description: 'Klęcząc, dłonie na szerokość barków lub szerzej. Ściągnij łopatki, a następnie ściągnij drążek do klatki. Patrz w sufit przez cały czas trwania ruchu. Wróć do pełnego zwisu ramion.',
         substitutes: ['pullup', 'kneeling lat pushdown']
     },
     one_arm_pulldown: {
@@ -499,8 +499,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Seated in the lat pulldown machine, begin by retracting your shoulder and scapula down and backwards. Then pull the handle down until your thumb can touch your shoulder. Repeat on both sides.',
+        muscles: ['plecy'],
+        description: 'Siedząc na maszynie do ściągania drążka, zacznij od ściągnięcia barku i łopatki w dół. Następnie ściągnij uchwyt w dół, aż kciuk dotknie barku. Powtórz na obie strony.',
         substitutes: ['pullup', 'kneeling lat pushdown']
     },
     barbell_bentover_row: {
@@ -511,12 +511,12 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing away from your feet.',
-            overhand: 'Perform this movement with a pronated grip, palms facing towards your feet.',
+            underhand: 'Wykonaj podchwytem (wnętrza dłoni od siebie).',
+            overhand: 'Wykonaj nachwytem (wnętrza dłoni do siebie/w dół).',
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Begin standing, with your hands slightly wider than shoulder width apart holding the bar. With a slight bend in your knees, hinge at your hips until your torso is angled 45 degrees forward. Imagine pulling your elbows back behind you to complete the row.',
+        muscles: ['plecy'],
+        description: 'Stojąc, trzymaj sztangę nieco szerzej niż barki. Lekko ugnij kolana, pochyl tułów w biodrach pod kątem 45 stopni. Wyobraź sobie, że ciągniesz łokcie w tył za siebie, przyciągając sztangę do brzucha.',
         substitutes: ['seated row', 'dumbbell row']
     },
     dumbbell_bentover_row: {
@@ -527,13 +527,13 @@ export const EXERCISES = {
             equipment: ['dumbbell']
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing away from your feet.',
-            neutral_grip: 'Perform this movement with a neutral grip, palms facing each other.',
-            overhand: 'Perform this movement with a pronated grip, palms facing towards your feet.',
+            underhand: 'Wykonaj podchwytem.',
+            neutral_grip: 'Wykonaj chwytem neutralnym.',
+            overhand: 'Wykonaj nachwytem.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Begin standing, with your hands either side of your body holding the dumbbells. With a slight bend in your knees, hinge at your hips until your torso is angled 45 degrees forward. Imagine pulling your elbows back behind you to complete the row.',
+        muscles: ['plecy'],
+        description: 'Stojąc, trzymaj hantle po bokach. Lekko ugnij kolana, pochyl tułów w biodrach pod kątem 45 stopni. Przyciągaj łokcie w tył za siebie, wykonując wiosłowanie.',
         substitutes: ['seated row', 'dumbbell row']
     },
     pendlay_row: {
@@ -544,12 +544,12 @@ export const EXERCISES = {
             equipment: ['barbells']
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing away from your feet.',
-            overhand: 'Perform this movement with a pronated grip, palms facing towards your feet.',
+            underhand: 'Wykonaj podchwytem.',
+            overhand: 'Wykonaj nachwytem.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Begin with the bar on the ground, with your hands slightly wider than shoulder width apart. Hold your core tight, and pull your elbows back behind you until the bar touches your mid-chest. Slowly release back down to the ground and then repeat.',
+        muscles: ['plecy'],
+        description: 'Zacznij ze sztangą na ziemi, dłonie szerzej niż barki. Napnij brzuch i dynamicznie przyciągnij łokcie w tył, aż sztanga dotknie dolnej części klatki/splotu. Odłóż sztangę na ziemię i powtórz.',
         substitutes: ['seated row', 'barbell row']
     },
     bodyweight_row: {
@@ -560,12 +560,12 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing away from your feet.',
-            overhand: 'Perform this movement with a pronated grip, palms facing towards your feet.',
+            underhand: 'Wykonaj podchwytem.',
+            overhand: 'Wykonaj nachwytem.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Find a bar or table at approximately chest to weight height, and hang underneath it with your legs extending out underneath the support. Row your chest to the bar, and slowly lower yourself back down. It\'s preferable that your body remain rigid and straight during the execution of the exercise.',
+        muscles: ['plecy'],
+        description: 'Znajdź drążek lub stabilny stół na wysokości pasa/klatki. Zwisając pod nim z wyprostowanymi nogami, przyciągnij klatkę do drążka, a następnie powoli się opuść. Ciało powinno być sztywne i proste.',
         substitutes: ['seated row', 'barbell row']
     },
     tbar_row: {
@@ -576,8 +576,8 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'With the bar between your legs, your legs slightly bent, and with your torso hinged forward at the hips by approximately 45 degrees, row your elbows backwards until the weights touch your chest. Sit your bum back a bit to counter-balance the weight during this exercise.',
+        muscles: ['plecy'],
+        description: 'Ze sztangą między nogami, lekko ugiętymi kolanami i tułowiem pochylonym o 45 stopni, wiosłuj łokciami w tył, aż ciężar dotknie klatki. Wypnij biodra lekko w tył dla przeciwwagi.',
         substitutes: ['seated row', 'dumbbell row']
     },
     seated_row: {
@@ -588,12 +588,12 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing towards the ceiling.',
-            overhand: 'Perform this movement with a pronated grip, palms facing towards the ground.',
+            underhand: 'Wykonaj podchwytem.',
+            overhand: 'Wykonaj nachwytem.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'With your back vertical, row your elbows back and imagine pulling your hands to your hips on either side of your body. Ensure to minimise torso and hip hinging during the movement. Row low to grow.',
+        muscles: ['plecy'],
+        description: 'Z pionowym tułowiem, ciągnij łokcie w tył, celując dłońmi w stronę bioder. Minimalizuj bujanie tułowiem. Wiosłuj nisko, by rosnąć szeroko.',
         substitutes: ['barbell row', 'dumbbell row']
     },
     unilateral_seated_row: {
@@ -604,13 +604,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing the ceiling.',
-            neutral_grip: 'Perform this movement with a neutral grip, palms facing towards your body.',
-            overhand: 'Perform this movement with a pronated grip, palms facing towards the ground.',
+            underhand: 'Wykonaj podchwytem.',
+            neutral_grip: 'Wykonaj chwytem neutralnym.',
+            overhand: 'Wykonaj nachwytem.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'With the handle attachment, row your elbow back and pull your hand and the handle to your hip, and then release forwards.',
+        muscles: ['plecy'],
+        description: 'Używając pojedynczego uchwytu, ciągnij łokieć w tył, kierując dłoń do biodra, a następnie rozluźnij w przód.',
         substitutes: ['seated row', 'dumbbell row']
     },
     cable_row: {
@@ -621,12 +621,12 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing towards the ceiling.',
-            overhand: 'Perform this movement with a pronated grip, palms facing towards the ground.',
+            underhand: 'Wykonaj podchwytem.',
+            overhand: 'Wykonaj nachwytem.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'With the cable at any height, bend your knees and lean back against the weights. Maintain your body in a stationary position, and row your elbows back, keeping your forearms neutral to the movement. Hold your core strong and tight.',
+        muscles: ['plecy'],
+        description: 'Z linką na dowolnej wysokości, ugnij kolana i odchyl się w tył. Utrzymuj ciało nieruchomo i wiosłuj łokciami w tył, przedramiona zgodnie z linią ruchu. Trzymaj mocny brzuch.',
         substitutes: ['seated row', 'tbar row']
     },
     unilaterial_dumbbell_row: {
@@ -637,8 +637,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Leaning forward at a 45 degree angle, with your weight supported through one arm pressing on a study surface, hang the dumbbell from your other arm. Ensure the leg on the same side as your supporting arm is forward. Row your elbow back and your hand to your hip. Repeat on both sides.',
+        muscles: ['plecy'],
+        description: 'Pochyl się pod kątem 45 stopni, opierając jedną rękę na stabilnym podłożu. Hantel w drugiej ręce. Noga po stronie podporu wysunięta w przód. Ciągnij łokieć w tył, dłoń do biodra. Powtórz na obie strony.',
         substitutes: ['unilateral seated row', 'dumbbell row']
     },
     chest_supported_dumbbell_row: {
@@ -649,8 +649,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'With your chest supported on a bench angled to a 30 to 45 degree incline, hand your arms either side with dumbbells in each. Row your elbows back with your hands on a trajectory towards your lower waist. Slowly release the weights back forward.',
+        muscles: ['plecy'],
+        description: 'Z klatką opartą na ławce skośnej (30-45 stopni), ramiona z hantlami zwisają po bokach. Wiosłuj łokciami w tył, kierując dłonie w stronę dolnej części talii. Powoli opuść ciężar.',
         substitutes: ['seated row', 'barbell row']
     },
     machine_row: {
@@ -661,13 +661,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing the ceiling.',
-            neutral_grip: 'Perform this movement with a neutral grip, palms facing towards your body.',
-            overhand: 'Perform this movement with a pronated grip, palms facing towards the ground.',
+            underhand: 'Wykonaj podchwytem.',
+            neutral_grip: 'Wykonaj chwytem neutralnym.',
+            overhand: 'Wykonaj nachwytem.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Adjust the seat height so your hands retract back to a lower torso height. Row your elbows back.',
+        muscles: ['plecy'],
+        description: 'Ustaw siedzisko tak, aby przyciągać ręce do dolnej części tułowia. Wiosłuj łokciami w tył.',
         substitutes: ['seated row', 'dumbbell row']
     },
     machine_lat_pulldown: {
@@ -678,13 +678,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing towards you.',
-            neutral_grip: 'Perform this movement with a neutral grip, palms facing each other.',
-            overhand: 'Perform this movement with a pronated grip, palms facing away from you.'
+            underhand: 'Wykonaj podchwytem.',
+            neutral_grip: 'Wykonaj chwytem neutralnym.',
+            overhand: 'Wykonaj nachwytem.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Ensure you look at the ceiling while performing this exercise. Begin by retracting your scapula down and back, and then pull the machine bar down until your thumbs can touch your chest.',
+        muscles: ['plecy'],
+        description: 'Patrz w sufit podczas ćwiczenia. Ściągnij łopatki w dół i w tył, a następnie ściągnij ramiona maszyny, aż kciuki dotkną klatki.',
         substitutes: ['lat pulldown', 'pullup']
     },
     smith_machine_row: {
@@ -695,12 +695,12 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            underhand: 'Perform this movement with a supinated grip, palms facing towards forwards.',
-            overhand: 'Perform this movement with a pronated grip, palms facing backwards.',
+            underhand: 'Wykonaj podchwytem.',
+            overhand: 'Wykonaj nachwytem.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['back'],
-        description: 'Begin standing, with your hands slightly wider than shoulder width apart holding the bar. With a slight bend in your knees, hinge at your hips until your torso is angled 45 degrees forward. Imagine pulling your elbows back behind you to complete the row.',
+        muscles: ['plecy'],
+        description: 'Stojąc, dłonie szerzej niż barki. Lekko ugnij kolana, pochyl tułów w biodrach (45 stopni). Wyobraź sobie, że ciągniesz łokcie w tył, wykonując wiosłowanie.',
         substitutes: ['seated row', 'dumbbell row']
     },
     seated_dumbbell_overhead_press: {
@@ -711,8 +711,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'With dumbbells in each hand, begin with the weights in-line with your ears and press them directly up above your head. Lower down until until your thumbs can touch your ears. Puff your chest out during this exercise.',
+        muscles: ['barki'],
+        description: 'Z hantlami w dłoniach, zacznij z ciężarami na poziomie uszu i wyciśnij je bezpośrednio nad głowę. Opuszczaj, aż kciuki dotkną poziomu uszu. Wypnij klatkę podczas ćwiczenia.',
         substitutes: ['barbell overhead press', 'arnold press']
     },
     barbell_overhead_press: {
@@ -723,8 +723,8 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'Standing with the bar starting at chin height and hands slightly wider than shoulder width, press the bar up and as it moves above head height, press your head forward between your arms. Squeeze your bum throughout the duration of the exercise.',
+        muscles: ['barki'],
+        description: 'Stojąc ze sztangą na wysokości brody, dłonie nieco szerzej niż barki. Wyciskaj sztangę w górę, a gdy minie czoło, wysuń głowę lekko do przodu między ramiona. Napnij pośladki przez cały czas trwania ruchu.',
         substitutes: ['barbell overhead press', 'arnold press']
     },
     dumbbell_lateral_raise: {
@@ -735,8 +735,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'With dumbbells in each hand, pretend your a bird trying to flap your arms, and raise the weights up either side of your body. Ensure your elbows are always at a higher height than the weights and your wrists. Slowly lower down to each side.',
+        muscles: ['barki'],
+        description: 'Z hantlami w dłoniach, udawaj ptaka machającego skrzydłami – unoś ciężary na boki. Upewnij się, że łokcie są zawsze wyżej niż ciężary i nadgarstki. Powoli opuszczaj.',
         substitutes: ['unilateral cable raise', 'face pulls']
     },
     dumbbell_front_raise: {
@@ -747,8 +747,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'With dumbbells in each hand down by your side, one at a time, raise the dumbbell out infront of you until it is at eye height, keeping your arm straight. Then slowly lower back down and repeat on the other side.',
+        muscles: ['barki'],
+        description: 'Z hantlami opuszczonymi wzdłuż ciała, unoś jeden hantel przed siebie do wysokości oczu, trzymając rękę prostą. Powoli opuść i powtórz drugą ręką.',
         substitutes: ['unilateral cable raise', 'face pulls', 'cable_rope_front_raise']
     },
     cable_rope_front_raise: {
@@ -759,8 +759,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'With a rope handle in each hand (the cable pinned as low as possible and the cable itself, between your legs), raise the rope handles out infront of you until it is at eye height, keeping your arms straight. Then slowly lower back down.',
+        muscles: ['barki'],
+        description: 'Z liną wyciągu (sznurami) w dłoniach (wyciąg dolny, linka między nogami), unoś ramiona przed siebie do wysokości oczu, trzymając je proste. Powoli opuść.',
         substitutes: ['dumbbell front raise', 'face pulls']
     },
     unilateral_cable_raise: {
@@ -771,8 +771,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'With the cable on the lowest adjustment, hold the vertical bar with one hand and lean out from the cable machine by approximately 30 degrees. Hold the handle in the other hand, and raise the handle (leading with your elbow) up to shoulder height.',
+        muscles: ['barki'],
+        description: 'Z wyciągiem dolnym, chwyć pionową belkę jedną ręką i odchyl się od maszyny o ok. 30 stopni. Drugą ręką chwyć rączkę wyciągu i unoś ją (prowadząc łokciem) do wysokości barku.',
         substitutes: ['dumbbell lateral raise', 'face pulls']
     },
     cable_rope_face_pulls: {
@@ -783,8 +783,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'Using the rope cable attachment, adjust the cable height so the pulley is just above head height. Hold the handles with your thumbs at the end of the rope, pointing towards you. Pull the rope towards your forehead, with your hands approximately ear height and your thumbs pointing behind you.',
+        muscles: ['barki'],
+        description: 'Używając sznura, ustaw wyciąg nieco powyżej głowy. Chwyć końce liny kciukami skierowanymi do siebie. Ciągnij linę w stronę czoła, rozrywając ją na boki, tak by dłonie znalazły się przy uszach, a kciuki wskazywały za ciebie.',
         substitutes: ['unilateral cable raise', 'cable push aparts']
     },
     cable_push_aparts: {
@@ -795,8 +795,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'For this exercise, grip the carribena/handles so that your pinky fingers are facing backwards. Then imagine you\'re walking through a forest full of vines and spread those bad boys apart. The cable should be pinned just above head height.',
+        muscles: ['barki'],
+        description: 'Chwyć karabińczyki/rączki tak, aby małe palce były skierowane w tył. Wyobraź sobie, że przedzierasz się przez gąszcz lian i rozszerz ramiona na boki. Wyciąg ustawiony powyżej głowy.',
         substitutes: ['unilateral cable raise', 'cable rope face pulls']
     },
     bentover_dumbbell_push_aparts: {
@@ -807,8 +807,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'Sitting bent forwards, head to knees, holding light dumbbells in either hand dead hanging down either side of your legs, raise them out to either side, pinkies leading the movement until they are in the same vertical plane as your shoulders and your thumbs are pointing straight downwards.',
+        muscles: ['barki'],
+        description: 'Siedząc w pochyleniu (głowa przy kolanach), trzymając lekkie hantle luźno po bokach nóg, unoś je na boki (małe palce prowadzą ruch), aż znajdą się w linii barków, a kciuki będą skierowane w dół.',
         substitutes: ['unilateral cable raise', 'cable rope face pulls']
     },
     chest_supported_dumbbell_face_pulls: {
@@ -819,8 +819,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'Lying on a 30 to 45 degree inclined bench with dumbbells in either hand, pull the dumbbells to either side of your ears, leading the motion with your elbows.',
+        muscles: ['barki'],
+        description: 'Leżąc na ławce skośnej (30-45 stopni) z hantlami, ciągnij hantle w stronę uszu, prowadząc ruch łokciami.',
         substitutes: ['unilateral cable raise', 'cable push aparts']
     },
     chest_supported_barbell_face_pulls: {
@@ -831,8 +831,8 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'Lying on a 30 to 45 degree inclined bench with a barbell gripped twice shoulder width, pull your thumbs back until they are in-line with your ears, leading the motion with your elbows.',
+        muscles: ['barki'],
+        description: 'Leżąc na ławce skośnej (30-45 stopni) ze sztangą (chwyt 2x szerszy niż barki), ciągnij kciuki w stronę uszu, prowadząc ruch łokciami.',
         substitutes: ['dumbbell face pulls', 'cable push aparts']
     },
     arnold_dumbbell_press: {
@@ -843,8 +843,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'Seated on a bench with a back rest, hold the dumbbells in-front of you at eye height, palms facing your face. Keeping the dumbbells at their current height, open your shoulders and move your elbows to either side until the dumbbells are next to your ears, your palms facing forwards, and then press them up overhead.',
+        muscles: ['barki'],
+        description: 'Siedząc na ławce z oparciem, trzymaj hantle przed sobą na wysokości oczu, dłonie skierowane do twarzy. Otwórz klatkę i przenieś łokcie na boki (hantle przy uszach, dłonie do przodu), a następnie wyciśnij je nad głowę.',
         substitutes: ['barbell overhead press', 'dumbbell overhead press']
     },
     lyings_ys: {
@@ -855,8 +855,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'Lying face down on the ground, extend your arms up above your head so your elbows are tucked up against your ears, and your thumbs pointing to the ceiling and your palms to each other. Now try to raise your hands and arms off the ground, pulling your thumbs back as far as you can and your scapula together while maintaining the same shape.',
+        muscles: ['barki'],
+        description: 'Leżąc twarzą do ziemi, wyciągnij ramiona nad głowę (kształt Y), łokcie przy uszach, kciuki do sufitu. Unieś dłonie i ramiona z ziemi, ciągnąc kciuki w tył i ściągając łopatki.',
         substitutes: ['face pulls']
     },
     lying_ts: {
@@ -867,8 +867,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'Lying face down on the ground, extend your arms out to either side of your body, pointing directly away from yourself so your elbows and hands are in plane/level with your shoulders. Now while keeping your elbows and hands in the same location, rotate your hands so that your palms point upwards/above your head and your thumbs point to the ceiling. Now try to raise your hands and arms off the ground, pulling your thumbs back as far as you can and your scapula together while maintaining the same shape.',
+        muscles: ['barki'],
+        description: 'Leżąc twarzą do ziemi, wyciągnij ramiona na boki (kształt T), w linii barków. Zrotuj dłonie tak, by kciuki wskazywały sufit. Unieś ramiona z ziemi, mocno ściągając łopatki.',
         substitutes: ['supermans']
     },
     lying_ws: {
@@ -879,8 +879,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'Lying face down on the ground, extend your arms out to either side of your body, pointing directly away from yourself so your elbows and hands are in plane/level with your shoulders. Now while keeping your elbows in the same location, bend them so that your fingers point directly upwards and so your elbow makes a 90 degree bend. Now position your hands so that your palms face your head, your fingers forwards/above your head, and your thumbs to the ceiling behind you. Now try to raise your hands and arms off the ground, pulling your thumbs back as far as you can and your scapula together while maintaining the same shape.',
+        muscles: ['barki'],
+        description: 'Leżąc twarzą do ziemi, wyciągnij ramiona na boki. Zegnij łokcie do 90 stopni (palce w górę). Ustaw dłonie tak, by wnętrza patrzyły na głowę, a kciuki w sufit (kształt W). Unieś ramiona z ziemi, ściągając łopatki.',
         substitutes: ['plank side stars']
     },
     plank_side_stars: {
@@ -891,8 +891,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['shoulders'],
-        description: 'Seated on a bench with a back rest, hold the dumbbells in-front of you at eye height, palms facing your face. Keeping the dumbbells at their current height, open your shoulders and move your elbows to either side until the dumbbells are next to your ears, your palms facing forwards, and then press them up overhead.',
+        muscles: ['barki'],
+        description: 'Siedząc na ławce z oparciem, trzymaj hantle przed sobą na wysokości oczu, dłonie skierowane do twarzy. Otwórz klatkę i przenieś łokcie na boki (hantle przy uszach, dłonie do przodu), a następnie wyciśnij je nad głowę. (Opis w oryginale powtórzony z Arnold Press - sprawdź poprawność ćwiczenia)',
         substitutes: ['lying ts']
     },
     back_squats: {
@@ -903,8 +903,8 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         unit: 'reps', //vs duration    
-        muscles: ['quads'],
-        description: 'Stand with your feet slightly wider than shoulder width, toes facing 15 degrees out from forward, slowly lower your body down until your thighs are parallel with the ground. Ensure your core is tight and your knees track in the direction of your toes. Rest the bar on the backs of your shoulders, behind your head.',
+        muscles: ['czworogłowe'],
+        description: 'Stopy nieco szerzej niż barki, palce skierowane 15 stopni na zewnątrz. Powoli opuszczaj ciało, aż uda będą równoległe do ziemi. Trzymaj brzuch napięty, kolana kieruj w stronę palców stóp. Sztanga spoczywa na górze pleców.',
         substitutes: ['front squats', 'legpress']
     },
     bodyweight_squat: {
@@ -915,8 +915,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['quads'],
-        description: 'Stand with your feet slightly wider than shoulder width, toes facing 15 degrees out from forward, slowly lower your body down until your thighs are parallel with the ground. Ensure your core is tight and your knees track in the direction of your toes.',
+        muscles: ['czworogłowe'],
+        description: 'Stopy nieco szerzej niż barki, palce skierowane 15 stopni na zewnątrz. Powoli wykonaj przysiad, aż uda będą równoległe do ziemi. Trzymaj brzuch napięty, kolana kieruj w stronę palców stóp.',
         substitutes: ['front squats', 'legpress']
     },
     front_squats: {
@@ -927,8 +927,8 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         unit: 'reps', //vs duration    
-        muscles: ['quads'],
-        description: 'Stand with your feet slightly wider than shoulder width, toes facing 15 degrees out from forward, slowly lower your body down until your thighs are parallel with the ground. Ensure your core is tight and your knees track in the direction of your toes. Hold the bar on your shoulders, crossing your arms in-front of you (elbows above the bar).',
+        muscles: ['czworogłowe'],
+        description: 'Stopy nieco szerzej niż barki, palce 15 stopni na zewnątrz. Wykonaj przysiad do równoległości. Brzuch napięty, kolana na zewnątrz. Trzymaj sztangę z przodu na barkach, krzyżując ramiona (łokcie wysoko).',
         substitutes: ['back squats', 'legpress']
     },
     goblet_squats: {
@@ -939,8 +939,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['quads'],
-        description: 'Elevate the heels of your feet on a plate approximate 2in or 5cm above thick. Keep your feet slightly narrower than shoulder width, and holding the dumbbell like a goblet at shoulder height, squat down, keeping your back as erect as possible.',
+        muscles: ['czworogłowe'],
+        description: 'Podłóż pod pięty talerz (ok. 5 cm). Stopy węziej niż barki. Trzymając hantel jak kielich przy klatce, wykonaj przysiad, utrzymując plecy tak proste, jak to możliwe.',
         substitutes: ['front squats', 'legpress']
     },
     box_squats: {
@@ -951,8 +951,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['quads'],
-        description: 'With a barbell on your shoulders, bodyweight, or holding a dumbbell, situate yourself standing infront of, and facing away from, a box or chair or simular elevated surface. Position your feet shoulder width apart, and slow squat down, as if sitting back to sit down on the chair. Only lightly let your bum touch the chair, before standing back up.',
+        muscles: ['czworogłowe'],
+        description: 'Ze sztangą, hantlem lub masą własną, stań tyłem do skrzyni/krzesła. Stopy na szerokość barków. Powoli siadaj w tył. Lekko dotknij pośladkami skrzyni, a następnie wstań.',
         substitutes: ['front squats', 'legpress']
     },
     bulgarian_split_squats: {
@@ -963,8 +963,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['quads', 'glutes'],
-        description: 'Body weight or with dumbbells in each hand, lunge forward, elevating your rear leg up approximately 20 to 30cm, 1ft, above the ground. Keep your weight over your front leg, and lunge your body down until your front thigh is parallel with the ground.',
+        muscles: ['czworogłowe', 'pośladki'],
+        description: 'Z masą własną lub hantlami, zrób wykrok, opierając tylną stopę na podwyższeniu (ok. 20-30 cm). Trzymaj ciężar na przedniej nodze i opuść się, aż przednie udo będzie równoległe do ziemi.',
         substitutes: ['lunges', 'legpress']
     },
     lunges: {
@@ -975,8 +975,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['quads', 'glutes'],
-        description: 'Continuously lunge forward, slowly dropping your rear knee to touch the ground with each subsequent lunge. Ensure your body weight stays predominantly over your front leg.',
+        muscles: ['czworogłowe', 'pośladki'],
+        description: 'Wykonuj ciągłe wykroki do przodu, powoli dotykając tylnym kolanem ziemi przy każdym kroku. Utrzymuj ciężar ciała głównie na nodze wykrocznej.',
         substitutes: ['front squats', 'bulgarian split squats']
     },
     legpress: {
@@ -987,13 +987,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            wide_stance: 'Place your feet a fair bit wider than shoulder width apart and vertically/centrally on the face of feet placement area.',
-            neutral_stance: 'Place your feet shoulder width apart and vertically/centrally on the face of feet placement area.',
-            narrow_stance: 'Place your feet 10cm/3in apart and vertically/centrally on the face of feet placement area.'
+            wide_stance: 'Stopy szerzej niż barki, na środku platformy.',
+            neutral_stance: 'Stopy na szerokość barków, na środku platformy.',
+            narrow_stance: 'Stopy wąsko (ok. 10 cm odstępu), na środku platformy.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['quads'],
-        description: 'Slowly lower the weight down until your knees are at a 90 degree angle. Then push the weight back up, ensuring not to lock-out your legs at the top.',
+        muscles: ['czworogłowe'],
+        description: 'Powoli opuszczaj ciężar, aż kolana będą pod kątem 90 stopni. Wypchnij ciężar, nie blokując kolan w pełnym wyproście.',
         substitutes: ['front squats', 'back squats']
     },
     quad_extension: {
@@ -1004,8 +1004,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['quads'],
-        description: 'On a quad extension machine, straighten your legs against the resistance of the machine. Face your toes in different directions to preferencially engage different parts of your quad muscles.',
+        muscles: ['czworogłowe'],
+        description: 'Na maszynie do wyprostów nóg, prostuj nogi przeciw oporowi. Możesz zmieniać ustawienie stóp, aby angażować różne części czworogłowych.',
         substitutes: ['goblet squats', 'legpress']
     },
     step_ups: {
@@ -1016,8 +1016,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['quads', 'glutes'],
-        description: 'Without jumping, step up onto an evelated surface. They key is to slowly lower yourself back down on one leg without falling.',
+        muscles: ['czworogłowe', 'pośladki'],
+        description: 'Bez wyskakiwania, wejdź na podwyższenie. Kluczem jest powolne opuszczanie się w dół na jednej nodze, zachowując równowagę.',
         substitutes: ['lunges', 'front squats']
     },
     wall_sits: {
@@ -1028,8 +1028,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['quads'],
-        description: 'With your back against a wall, and your knees making an angle of approximately 90 degrees, hold the wall sit as long as possible, without sinking down to the ground or holding yourself with your arms.',
+        muscles: ['czworogłowe'],
+        description: 'Z plecami opartymi o ścianę i kolanami pod kątem 90 stopni, wytrzymaj w tej pozycji jak najdłużej, nie zjeżdżając w dół ani nie pomagając sobie rękami.',
         substitutes: ['front squats', 'goblet squats']
     },
     romanian_deadlifts: {
@@ -1040,13 +1040,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            wide_stance: 'Place your feet one and half times as wide as shoulder width.',
-            neutral_stance: 'Place your feet shoulderwidth distance apart.',
-            narrow_stance: 'Place your feet right besides eachother so that they are touching.'
+            wide_stance: 'Stopy 1.5 raza szerzej niż barki.',
+            neutral_stance: 'Stopy na szerokość barków.',
+            narrow_stance: 'Stopy złączone.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['hamstrings'],
-        description: 'Stand holding a bar or dumbbells hanging at your waist, hands shoulder width apart. With a slight bend in your knees, you want to hinge at your hips, slightly sitting back whilst tilting your torso forward. Keeping your back straight, run the barbell/dumbbells back down the length of your legs (as if touching).',
+        muscles: ['dwugłowe'],
+        description: 'Stojąc ze sztangą lub hantlami przy pasie, lekko ugnij kolana. Wykonaj zawias w biodrach (wypchnij tyłek w tył), pochylając tułów. Plecy proste. Prowadź ciężar blisko nóg.',
         substitutes: ['dumbbell rdls']
     },
     hamstring_back_extensions: {
@@ -1057,8 +1057,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['hamstrings', 'glutes'],
-        description: 'On the back extension machine, lock your feet in place and while lowering your torso down over the front of the machine, resist the motion by trying to curl your heels backwards to your bum, against the foot stop.',
+        muscles: ['dwugłowe', 'pośladki'],
+        description: 'Na ławce rzymskiej, zablokuj stopy. Opuszczając tułów, stawiaj opór, próbując przyciągnąć pięty do pośladków (zapierając się o blokadę).',
         substitutes: ['dumbbell rdls', 'seated hamstring curl']
     },
     unilateral_dumbbell_rdls: {
@@ -1069,8 +1069,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['hamstrings', 'glutes'],
-        description: 'Placing on foot forward of the other, lean your weight onto the front foot and track the dumbbells up and down said forward leg. Ensure you are maintain a straight back while performing this exercise.',
+        muscles: ['dwugłowe', 'pośladki'],
+        description: 'Jedna noga wysunięta do przodu. Przenieś ciężar na przednią nogę i prowadź hantle wzdłuż niej. Utrzymuj proste plecy.',
         substitutes: ['barbell rdls', 'hamstring back extensions']
     },
     seated_hamstring_curl: {
@@ -1081,8 +1081,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['hamstrings'],
-        description: 'With you knees locked into place, try to pull your heels back as far as you can towards your bum.',
+        muscles: ['dwugłowe'],
+        description: 'Z kolanami zablokowanymi pod wałkiem, staraj się przyciągnąć pięty jak najdalej w stronę pośladków.',
         substitutes: ['dumbbell rdls', 'seated hamstring curl']
     },
     tbar_rdls: {
@@ -1093,8 +1093,8 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         unit: 'reps', //vs duration    
-        muscles: ['hamstrings'],
-        description: 'With the bar between your legs, and your feet place slightly in-front of your center of gravity, slowly sit back keep your legs mostly straight, until the weight touches the ground. Maintain a straight back during the execution of this exercise.',
+        muscles: ['dwugłowe'],
+        description: 'Sztanga między nogami, stopy nieco przed środkiem ciężkości. Powoli siadaj w tył na prawie prostych nogach, aż ciężar dotknie ziemi. Plecy proste.',
         substitutes: ['dumbbell rdls', 'unilateral dumbbell rdls']
     },
     lying_machine_hamstring_curls: {
@@ -1105,8 +1105,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['hamstrings'],
-        description: 'Lying on the machine, curl your heels back to your bum, and then slowly release.',
+        muscles: ['dwugłowe'],
+        description: 'Leżąc na maszynie, uginaj nogi przyciągając pięty do pośladków, a następnie powoli opuszczaj.',
         substitutes: ['tbar rdls', 'seated hamstring curl']
     },
     lying_dumbbell_hamstring_curls: {
@@ -1117,8 +1117,8 @@ export const EXERCISES = {
             equipment: ['dumbbell']
         },
         unit: 'reps', //vs duration    
-        muscles: ['hamstrings'],
-        description: 'Lying face down on the ground, hold a dumbbell up in the air between your feet, knees bent. Slowly lower the dumbbell down towards the ground, and after touching the ground, curl the dumbbell back up, heels pulling back towards up bum and up towards the ceiling.',
+        muscles: ['dwugłowe'],
+        description: 'Leżąc na brzuchu, trzymaj hantel między stopami, kolana ugięte. Powoli opuszczaj hantel do ziemi, a następnie ugnij nogi z powrotem, ciągnąc pięty do pośladków.',
         substitutes: ['tbar rdls', 'seated hamstring curl']
     },
     cable_leg_adduction: {
@@ -1129,8 +1129,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['glutes'],
-        description: 'Standing adjacent to the cable machine, with the cable at the lowest placement, place the handle around your outer foot and adduct that foot out horizontally, away from the cable machine.',
+        muscles: ['pośladki'],
+        description: 'Stojąc bokiem do wyciągu dolnego, załóż opaskę na dalszą stopę i odwódź ją poziomo na zewnątrz, z dala od maszyny.',
         substitutes: ['cable kickbacks']
     },
     cable_kickbacks: {
@@ -1141,8 +1141,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['glutes'],
-        description: 'Facing the cable machine, place the cable machine at the lowest placement, and with the handle wrapped around your ankle, kick your heel backwards as far as you can.',
+        muscles: ['pośladki'],
+        description: 'Stojąc przodem do wyciągu dolnego, z opaską na kostce, wykonaj wykop nogi w tył tak daleko, jak możesz.',
         substitutes: ['cable leg adduction']
     },
     hip_thrusts: {
@@ -1153,8 +1153,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['glutes'],
-        description: 'With your back rest on an elevated surface, or on the ground, and your knees bent to appoximately 90 degrees, thrust your hips forward and tuck your chin. Without moving your heels, try to pull them back towards your bum throughout the motion.',
+        muscles: ['pośladki'],
+        description: 'Z plecami opartymi o ławkę (lub na ziemi), kolana ugięte 90 stopni. Wypychaj biodra w górę, broda przyciągnięta do klatki. Nie ruszając stopami, próbuj ciągnąć pięty w stronę pośladków.',
         substitutes: ['unilateral hip thrusts']
     },
     unilateral_hip_thrusts: {
@@ -1165,8 +1165,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['glutes'],
-        description: 'With your back rest on an elevated surface, or on the ground, and one knee bent to appoximately 90 degrees (the ohter leg extended), thrust your hips forward and tuck your chin. Without moving your heel, try to pull them back towards your bum throughout the motion.',
+        muscles: ['pośladki'],
+        description: 'Plecy oparte o ławkę/ziemię, jedno kolano ugięte 90 stopni (druga noga prosta). Wypychaj biodra w górę. Ciągnij piętę nogi podporowej w stronę pośladka.',
         substitutes: ['cable kickbacks']
     },
     deadlift: {
@@ -1177,8 +1177,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['back', 'hamstrings'],
-        description: 'Standing with the bar over your feet, grip it overhand shoulder width apart, while ensuring you back remains straight throughout the entire exercise. Begin the lift by straightening your legs, dragging the bar up your shins, and as soon as the bar is above knee height, straighten your torso and lean back to heavy the bar off the ground. In reverse, you start standing tall, and with a micro bend in your knees, you hinge at the hips (maintaining a straight) back until the bar is over you knees, at which point your hips stop hinging and your knees start bending until the bar touches the ground. This exercise may also be done with a sumo stance.',
+        muscles: ['plecy', 'dwugłowe'],
+        description: 'Stojąc ze sztangą nad stopami, chwyć ją nachwytem na szerokość barków. Plecy proste. Zacznij od wyprostu nóg, ciągnąc sztangę po piszczelach. Gdy minie kolana, wyprostuj tułów. Opuszczając: zacznij od cofnięcia bioder (zawias), gdy sztanga minie kolana, ugnij nogi do ziemi. Można wykonywać w wersji sumo.',
         substitutes: ['romanian deadlifts']
     },
     donkey_kicks: {
@@ -1189,8 +1189,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['glutes'],
-        description: 'You\'re a donkey, on your four limbs. Your owner is particularly annoying, standing directly behind you. With one leg, kick backwards and up as much as you can to teach them a lesson.',
+        muscles: ['pośladki'],
+        description: 'Jesteś osłem, na czworakach. Ktoś cię denerwuje, stojąc za tobą. Kopnij jedną nogą w tył i w górę najmocniej jak potrafisz, żeby dać nauczkę.',
         substitutes: ['cable kickbacks']
     },
     good_girls: {
@@ -1201,8 +1201,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['glutes'],
-        description: 'On the good girls machine we learn to keep our legs closed. Seated, you want to bring your knees together.',
+        muscles: ['pośladki'],
+        description: 'Na maszynie do przywodzicieli (adductor), siedząc, złączaj kolana do siebie.',
         substitutes: ['cable kickbacks']
     },
     fire_hydrants: {
@@ -1213,8 +1213,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['glutes'],
-        description: 'As if your weren\'t already a dog, hop down on all fours, with your hands underneath your pectorals. Now let your natural instincts take control, raising one leg out to the side as if to take care of business on the neighborhood firehydrant. Keep all other three points of contact station throughout this movement.',
+        muscles: ['pośladki'],
+        description: 'Na czworakach. Unoś jedną nogę w bok (jak pies przy hydrancie). Trzymaj pozostałe trzy punkty podparcia nieruchomo.',
         substitutes: ['froggy pumps']
     },
     froggy_pumps: {
@@ -1225,8 +1225,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['glutes'],
-        description: 'Lying flat on your back, drag your feet back towards your bum until your knees are bent at a 90 degree angle. With your feet still firm on the ground and touching, drop your knees to either side of your body. Now that you are in position, push down through the outsides of your feet so your bum and lower back lift off the ground. Pause while elevated, and then lower back down.',
+        muscles: ['pośladki'],
+        description: 'Leżąc na plecach, przyciągnij stopy do pośladków (złączone podeszwami), kolana szeroko (jak żaba). Wypychaj biodra w górę, napierając zewnętrznymi krawędziami stóp.',
         substitutes: ['cable kickbacks', 'fire hydrants']
     },
     bad_girls: {
@@ -1237,8 +1237,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['glutes'],
-        description: 'On the bad girls machine, or with a band around your knees while sitting on a chair, we reject conservatism by strengthening our abduction muscles, pushing our knees apart.',
+        muscles: ['pośladki'],
+        description: 'Na maszynie do odwodzicieli (abductor) lub z gumą wokół kolan siedząc: rozpychaj kolana na zewnątrz.',
         substitutes: ['cable kickbacks']
     },
     seated_calf_raises: {
@@ -1249,13 +1249,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            toes_in: 'Face your toes 30 degrees inwards from forwards while completing this movement.',
-            standard: 'Ensure your feet are directioned forward and shoulder width apart.',
-            toes_out: 'Face your toes 30 degrees outwards from forwards while completing this movement.'
+            toes_in: 'Palce skierowane 30 stopni do wewnątrz.',
+            standard: 'Stopy równolegle, na szerokość barków.',
+            toes_out: 'Palce skierowane 30 stopni na zewnątrz.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['calves'],
-        description: 'Seated with a restaint above your knees, you want to plantar flex your toes, pushing your knees away from the ground.',
+        muscles: ['łydki'],
+        description: 'Siedząc z obciążeniem na kolanach, wykonuj wspięcia na palce, unosząc kolana.',
         substitutes: ['standing calf raises']
     },
     standing_calf_raises: {
@@ -1266,13 +1266,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            toes_in: 'Face your toes 30 degrees inwards from forwards while completing this movement.',
-            standard: 'Ensure your feet are directioned forward and shoulder width apart.',
-            toes_out: 'Face your toes 30 degrees outwards from forwards while completing this movement.'
+            toes_in: 'Palce skierowane 30 stopni do wewnątrz.',
+            standard: 'Stopy równolegle, na szerokość barków.',
+            toes_out: 'Palce skierowane 30 stopni na zewnątrz.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['calves'],
-        description: 'Standing with weight loaded either in your hands or on your shoulders, you want to plantar flex your toes.',
+        muscles: ['łydki'],
+        description: 'Stojąc z ciężarem w rękach lub na barkach, wykonuj wspięcia na palce.',
         substitutes: ['seated calf raises']
     },
     walking_calf_raises: {
@@ -1283,8 +1283,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['calves'],
-        description: 'With weights in each hand, walk 50 paces where on each step you want to step up on your tippy toes to the maximal extreme.',
+        muscles: ['łydki'],
+        description: 'Z ciężarkami w dłoniach, zrób 50 kroków. Przy każdym kroku wspinaj się maksymalnie na palce.',
         substitutes: ['standing calf raises']
     },
     unilateral_calf_raises: {
@@ -1295,13 +1295,13 @@ export const EXERCISES = {
             equipment: []
         },
         variants: {
-            toes_in: 'Face your toes 30 degrees inwards from forwards while completing this movement.',
-            standard: 'Ensure your feet are directioned forward.',
-            toes_out: 'Face your toes 30 degrees outwards from forwards while completing this movement.'
+            toes_in: 'Palce skierowane 30 stopni do wewnątrz.',
+            standard: 'Stopa skierowana prosto.',
+            toes_out: 'Palce skierowane 30 stopni na zewnątrz.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['calves'],
-        description: 'Weight supported on the ball of one foot, calf raise.',
+        muscles: ['łydki'],
+        description: 'Wspięcia na palce na jednej nodze, ciężar na przodostopiu.',
         substitutes: ['seated calf raises']
     },
     monster_walks: {
@@ -1312,8 +1312,8 @@ export const EXERCISES = {
             equipment: ['band']
         },
         unit: 'reps', //vs duration    
-        muscles: ['glutes'],
-        description: 'With a band around your knees, squat to a 60 degree knee bend, and crab walk side to side, then dinosaur walk front to back.',
+        muscles: ['pośladki'],
+        description: 'Z gumą wokół kolan, zejdź do półprzysiadu (60 stopni). Chodź bokiem (jak krab) lub przód-tył (jak dinozaur).',
         substitutes: ['bad girls']
     },
     //arms lol
@@ -1325,13 +1325,13 @@ export const EXERCISES = {
             equipment: ['dumbbells', 'bands']
         },
         variants: {
-            hammer: 'Perform this exercise with a neutral grip, palms facing your body throughout the movement.',
-            supinated: 'Maintain a supinated grip on the dumbbell throughout the motion - palms facing forwards through to upwards.',
-            alternating: 'Begin the curl with dumbbells in a neutral grip, finishing with you palm supinated and facing the ceiling.'
+            hammer: 'Chwyt neutralny (młotkowy), dłonie skierowane do ciała przez cały ruch.',
+            supinated: 'Utrzymuj podchwyt (supinację) przez cały ruch - dłonie do przodu/sufitu.',
+            alternating: 'Zacznij chwytem neutralnym, kończąc z dłonią w supinacji (do sufitu).'
         },
         unit: 'reps', //vs duration    
-        muscles: ['biceps'],
-        description: 'Perform this exercise seated or standing with dumbbells in either hand by your sides. You can perform both hands at the same time or alternating. Curl each dumbbell upwards from your side until your elbows are fully bent, and the dumbbell is raised. Minimise swinging or shoulder usage throughout the movement.',
+        muscles: ['bicepsy'],
+        description: 'Siedząc lub stojąc z hantlami. Uginaj ramiona (razem lub naprzemiennie) do pełnego zgięcia łokcia. Minimalizuj bujanie i pracę barków.',
         substitutes: ['hammer curls']
     },
     // dumbbell_curls: {
@@ -1376,8 +1376,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['biceps'],
-        description: 'Using the rope cable attachment at the lowest elevation, hold the ends of the rope attachment with a neutral grip and curl them inwards and upwards',
+        muscles: ['bicepsy'],
+        description: 'Używając liny (sznurów) na wyciągu dolnym, chwyć końce chwytem neutralnym. Uginaj ramiona do wewnątrz i w górę.',
         substitutes: ['dumbbell hammer curls']
     },
     spider_curl: {
@@ -1388,13 +1388,13 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         variants: {
-            hammer: 'Perform this exercise with a neutral grip, palms facing your body throughout the movement.',
-            supinated: 'Maintain a supinated grip on the dumbbell throughout the motion - palms facing forwards through to upwards.',
-            alternating: 'Begin the curl with dumbbells in a neutral grip, finishing with you palm supinated and facing the ceiling.'
+            hammer: 'Chwyt neutralny (młotkowy).',
+            supinated: 'Chwyt podchwytem (supinacja).',
+            alternating: 'Zacznij neutralnie, kończ z supinacją.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['biceps'],
-        description: 'With you chest support on an inclined bench and with dumbbells in either hand, perform an alternating curl with a supinated wrist at the peak of the motion. Curl the dumbbells slightly inwards and under the bench.',
+        muscles: ['bicepsy'],
+        description: 'Leżąc klatką na ławce skośnej, hantle w dłoniach. Wykonuj uginanie naprzemienne (z supinacją w szczycie), lekko kierując hantle pod ławkę.',
         substitutes: ['barbell curls']
     },
     barbell_curls: {
@@ -1405,13 +1405,13 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         variants: {
-            wide_grip: 'Perform this exercise with hands space one and a half times shoulder width apart.',
-            narrow_grip: 'Perform this exercise with hands only a palms width apart.',
-            standard: 'Perform this exercise with hands spaced shoulder width apart.'
+            wide_grip: 'Chwyt 1.5 raza szerzej niż barki.',
+            narrow_grip: 'Chwyt wąski (na szerokość dłoni).',
+            standard: 'Chwyt na szerokość barków.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['biceps'],
-        description: 'Hold the barbell with a supinated grip and reduce shoulder engagement and swinging throughout the curl.',
+        muscles: ['bicepsy'],
+        description: 'Trzymaj sztangę podchwytem. Uginaj ramiona, redukując pracę barków i bujanie.',
         substitutes: ['dumbbell curls']
     },
     drag_curls: {
@@ -1422,12 +1422,12 @@ export const EXERCISES = {
             equipment: ['barbell', 'dumbbells']
         },
         variants: {
-            dumbbell: 'Perform this exercise with dumbbells.',
-            barbell: 'Perform this exercise with a barbell, and space your hands slightly wider than shoulder width apart.',
+            dumbbell: 'Wersja z hantlami.',
+            barbell: 'Wersja ze sztangą, chwyt nieco szerzej niż barki.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['biceps'],
-        description: 'Holding the weight with a supinated grip, drag the weights up an imaginary line in the same plane as your torso. It is a similar movement to a row with the major difference that you are standing mostly upright, only very slightly bent fowards at the hips.',
+        muscles: ['bicepsy'],
+        description: 'Trzymając ciężar podchwytem, "ciągnij" (drag) go w górę wzdłuż tułowia, cofając łokcie w tył. Stoisz prosto. To ruch podobny do wiosłowania, ale w pionie.',
         substitutes: ['dumbbell curls']
     },
     unilateral_hammer_cable_curl: {
@@ -1438,8 +1438,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['biceps'],
-        description: 'Holding the carribena, of the cable machine on the lowest elevation, in one hand, curl upwards and inwards so your hand finishes in the middle of your chest.',
+        muscles: ['bicepsy'],
+        description: 'Trzymając uchwyt wyciągu dolnego w jednej ręce, uginaj ramię w górę i do wewnątrz, kończąc dłonią na środku klatki.',
         substitutes: ['hammer curl']
     },
     preacher_curls: {
@@ -1450,13 +1450,13 @@ export const EXERCISES = {
             equipment: ['dumbbells', 'barbell']
         },
         variants: {
-            underhand: 'Hold a barbell or easy-curl bar with an underhand grip, palms facing the ceiling.',
-            neutral_grip: 'Perform this exercise with dumbbells in each hand, with a neutral grip, palms facing the horizontal.',
-            overhand: 'Hold a barbell or easy-curl bar with an overhand grip, palms facing the ground.'
+            underhand: 'Sztanga prosta lub łamana, podchwyt.',
+            neutral_grip: 'Hantle, chwyt neutralny.',
+            overhand: 'Sztanga prosta lub łamana, nachwyt.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['biceps'],
-        description: 'Perform this curl with your elbows supported on a surface angled 45 degrees down and away from you, or on the preacher curl machine. It is good practice to micro-pause at the bottom of the eccentric portion of the movement.',
+        muscles: ['bicepsy'],
+        description: 'Uginanie na modlitewniku (ramiona oparte pod kątem 45 stopni). Warto zrobić mikro-pauzę na dole ruchu.',
         substitutes: ['barbell curl']
     },
     cable_bar_curls: {
@@ -1467,8 +1467,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['biceps'],
-        description: 'Using the bar cable attachment at the lowest elevation, hold each end of the bar with a supinated grip (palms to the ceiling) and curl the weight up, minimizing shoulder engagement and swinging.',
+        muscles: ['bicepsy'],
+        description: 'Używając drążka na wyciągu dolnym, chwyć go podchwytem i uginaj ramiona, minimalizując ruch barków.',
         substitutes: ['dumbbell hammer curls']
     },
     tricep_rope_pushdown: {
@@ -1479,8 +1479,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['triceps'],
-        description: 'Adjust the cable to maximum elevation. Keeping your elbows just in-front of your sides, straighten your arms, pushing the weight down. Try to keep you elbows stationary in space throughout the motion. At the bottom of the pushing movement, twist the ropes handles down so that your palms face downwards as opposed to eachother.',
+        muscles: ['tricepsy'],
+        description: 'Wyciąg górny. Łokcie przy tułowiu, prostuj ramiona w dół. Łokcie nieruchomo w przestrzeni. Na dole ruchu rozszerz końce liny, kierując dłonie w dół.',
         substitutes: ['bar cable pushdown']
     },
     tricep_bar_pushdown: {
@@ -1491,8 +1491,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['triceps'],
-        description: 'Adjust the cable to maximum elevation. Keeping your elbows just in-front of your sides, straighten your arms, pushing the weight down. Try to keep you elbows stationary in space throughout the motion.',
+        muscles: ['tricepsy'],
+        description: 'Wyciąg górny, drążek prosty. Łokcie przy tułowiu, prostuj ramiona w dół. Łokcie nieruchomo.',
         substitutes: ['rope cable pushdown']
     },
     unilateral_cable_pushdown: {
@@ -1503,13 +1503,13 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         variants: {
-            overhand: 'Use a handle attachment and press the weight down with your palm facing the ground.',
-            neutral: 'Hold the cable attachment with a neutral hammer grip.',
-            underhand: 'Use a handle attachment with a supinated grip, palm facing the ceiling, press/pulling the weight down.'
+            overhand: 'Użyj uchwytu, dłoń skierowana do ziemi (nachwyt).',
+            neutral: 'Chwyt młotkowy.',
+            underhand: 'Podchwyt (dłoń do sufitu).'
         },
         unit: 'reps', //vs duration    
-        muscles: ['triceps'],
-        description: 'Adjust the cable to maximum elevation. Keeping your elbow just in-front of your hip, straighten your arms, pushing the weight down. Try to keep you elbows stationary in space throughout the motion.',
+        muscles: ['tricepsy'],
+        description: 'Wyciąg górny. Łokieć przy biodrze, prostuj ramię w dół.',
         substitutes: ['rope cable pushdown']
     },
     skull_crushers: {
@@ -1520,8 +1520,8 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         unit: 'reps', //vs duration    
-        muscles: ['triceps'],
-        description: 'Lie either on a flat or on a slighty inclined surface with a barbell directly above your skull. Starting with your arms straight, lower the weight down either to your forehead, or down behind your head and then press it back up. Vary your grip width to whatever is most comfortable for you and keep your elbows tucked throughout the movement.',
+        muscles: ['tricepsy'],
+        description: 'Leżąc płasko lub na skosie, sztanga nad głową. Zegnij łokcie, opuszczając ciężar do czoła lub za głowę, a następnie wyprostuj. Łokcie wąsko.',
         substitutes: ['face press']
     },
     face_press: {
@@ -1532,8 +1532,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['triceps'],
-        description: 'In an incline plank position with your hands pressing on something mid-chest height (hands closer than shoulder width), keep your elbows tucked and slowly lower your body/face towards the surface. Then press back up. Your elbows should track directly downwards, not flaring to either side.',
+        muscles: ['tricepsy'],
+        description: 'W pozycji plank (ręce wyżej, np. na ławce), dłonie węziej niż barki. Ugnij łokcie, opuszczając twarz do ławki, następnie wyprostuj. Łokcie prowadź wąsko pod siebie.',
         substitutes: ['overhead_skull_crushers']
     },
     overhead_skull_crusher: {
@@ -1544,8 +1544,8 @@ export const EXERCISES = {
             equipment: ['barbell', 'dumbbell', 'bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['triceps'],
-        description: 'Performed with either a barbell, dumbbell or cable attachment, start with the weight down behind your head while sitting vertically (elbows overhead). Straighten your arms overhead, extending the weight up above your head.',
+        muscles: ['tricepsy'],
+        description: 'Siedząc pionowo, ciężar (sztanga, hantel, wyciąg) za głową, łokcie w górze. Prostuj ramiona nad głowę.',
         substitutes: ['rope cable pushdown']
     },
     tricep_dip: {
@@ -1556,8 +1556,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['triceps'],
-        description: 'Perform with a bench behind you and your legs out in-front of you, your body supported by your hands on the bench. Slowly lower your bum down in-front of the bench, elbows tucked and tracking back behind you, and then press back up.',
+        muscles: ['tricepsy'],
+        description: 'Dłonie na ławce za plecami, nogi wyprostowane przed sobą. Opuszczaj pośladki w dół przed ławką, łokcie wąsko skierowane w tył. Wypchnij się w górę.',
         substitutes: ['rope cable pushdown']
     },
     dumbbell_skull_crushers: {
@@ -1568,8 +1568,8 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['triceps'],
-        description: 'Lie either flat or on a slight incline with heavy dumbbells in each hand directly above your skull. Starting with your arms straight, lower the weight down either either side of your forehead and then press it back up. Begin with palms facing the ceiling to neutral grip besides your ears.',
+        muscles: ['tricepsy'],
+        description: 'Leżąc (płasko/skos), hantle nad głową. Opuszczaj hantle po bokach czoła, a następnie wyprostuj. Zacznij chwytem neutralnym.',
         substitutes: ['face press']
     },
     diamond_pushups: {
@@ -1580,8 +1580,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['triceps'],
-        description: 'Position yourself in a pushup position, but adjust your hands, bringing them inwards, so that your fingers point inwards, the tips of your fingers are touching, and so that you can form a diamond, completing the shape by connecting your thumbs at the bottom of the diamond. Perform the pushup, keeping your elbows tucked in beside your body.',
+        muscles: ['tricepsy'],
+        description: 'Pompki, dłonie złączone tak, by palce wskazujące i kciuki tworzyły "diament". Łokcie blisko ciała.',
         substitutes: ['face press']
     },
     unilateral_cable_push_aways: {
@@ -1592,8 +1592,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['triceps'],
-        description: 'Lie either flat or on a slight incline with heavy dumbbells in each hand directly above your skull. Starting with your arms straight, lower the weight down either either side of your forehead and then press it back up. Begin with palms facing the ceiling to neutral grip besides your ears.',
+        muscles: ['tricepsy'],
+        description: 'Leżąc (płasko/skos), hantle nad głową. Opuszczaj hantle po bokach czoła, a następnie wyprostuj. (Uwaga: Opis w oryginale powtórzony z dumbbell skull crushers - sprawdź poprawność ćwiczenia, nazwa sugeruje odpychanie linki jednorącz).',
         substitutes: ['face press']
     },
     jack_knives: {
@@ -1604,8 +1604,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'Sitting on your heiny in a V shape with your knees bent and feet elevated, your hands stabilizing your body either side and slightly behind your bum, extend your legs our keeping them elevated and lean back slightly. Then bring your knees back in to your chest. Maintain a tucked core throughout this movement.',
+        muscles: ['brzuch'],
+        description: 'Siedząc w pozycji V (równoważnej), nogi ugięte w górze, ręce podpierają z tyłu. Prostuj nogi i odchylaj tułów, a następnie przyciągaj kolana do klatki.',
         substitutes: ['crunches']
     },
     crunches: {
@@ -1616,8 +1616,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'Lying flat on the ground with your knees bent at right angles, crunch your abs and imagine you\'re trying to squash a bug under your lower back deep into the ground.',
+        muscles: ['brzuch'],
+        description: 'Leżąc płasko, kolana ugięte. Spinaj brzuch, wyobrażając sobie, że wgniatasz dolny odcinek pleców w podłogę.',
         substitutes: ['dead_bugs', 'bicycle_crunches']
     },
     l_sits: {
@@ -1628,8 +1628,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'Sitting (with your legs straight out in front of you), or hanging, hold your legs up and your core tucked in an isometric hold. Legs should be at minimum parallel to the ground.',
+        muscles: ['brzuch'],
+        description: 'Siedząc (nogi proste) lub w zwisie, utrzymaj nogi w górze (min. równolegle do ziemi) izometrycznie.',
         substitutes: ['banana_hold', "plank"]
     },
     russian_twists: {
@@ -1640,8 +1640,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'Sitting on your dump-truck booty with your legs bent at 90 degrees in front of your and your feet on the ground, lean back about 30 degrees and twist your torso and shoulders, touching the ground on either side of your bum with both hands, and then repeat, both hands to the other side.',
+        muscles: ['brzuch'],
+        description: 'Siedząc, nogi ugięte w powietrzu, odchyl się o 30 stopni. Skręcaj tułów, dotykając dłońmi ziemi po obu stronach bioder.',
         substitutes: ['jack_knives']
     },
     plank: {
@@ -1652,8 +1652,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'Be the plank. Make sure your hips are tucked, your bum squeeze, your core tight, flat as a pancake.',
+        muscles: ['brzuch'],
+        description: 'Bądź deską. Biodra podwinięte, pośladki spięte, brzuch twardy, ciało płaskie.',
         substitutes: ['banana_hold, side_plank']
     },
     side_plank: {
@@ -1664,8 +1664,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'Similar to the traditional plank, you want to support your weight between your feet and one elbow as you hold your body looking perpendicular to the ground. Straight as a plank.',
+        muscles: ['brzuch'],
+        description: 'Podpór bokiem na przedramieniu i stopach. Ciało proste jak deska, prostopadle do ziemi.',
         substitutes: ['banana_hold', 'plank']
     },
     crunch_toes_touches: {
@@ -1676,8 +1676,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'Lying flat on the ground with your knees bent 90 degrees and feet flat on the ground, crunch your body up, and proceed to touch your left hand to your left foot and then your right hand to your right foot. Keep your head at the same level, just crunching your obliques on either side.',
+        muscles: ['brzuch'],
+        description: 'Leżąc płasko, kolana ugięte, stopy na ziemi. W lekkim spięciu brzucha dotykaj na zmianę lewą ręką lewej stopy, a prawą prawej (skłony boczne w leżeniu).',
         substitutes: ['russian_twists']
     },
     dead_bugs: {
@@ -1689,8 +1689,8 @@ export const EXERCISES = {
         },
 
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'Did you see that deadly bird flying overhead? Quickly, play dead, lie flat on your back and point your arms and legs directly up towards the sky. Now slowly lower one arm and the opposite leg down to the ground, keeping a tucked and tight core. Then raise them up, and repeat on with the remaining opposite limbs.',
+        muscles: ['brzuch'],
+        description: 'Leżąc na plecach, ręce i nogi w górze (jak martwy robak). Powoli opuszczaj przeciwną rękę i nogę do ziemi, trzymając lędźwia przyklejone do podłogi. Wróć i zmień strony.',
         substitutes: ['crunches', 'lying_leg_lifts']
     },
     lying_leg_lifts: {
@@ -1701,8 +1701,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'Recline, relax, lie flat on your back, ready for a res... to raise your legs up to the sky and then back down to the ground. Legs straight, core tucked, if you can fit your hands under your lower back at any part of the movement then bend your knees a bit more.',
+        muscles: ['brzuch'],
+        description: 'Leżąc na plecach, unoś proste nogi do pionu i opuszczaj je, nie dotykając ziemi. Jeśli lędźwia odrywają się od podłogi, ugnij lekko kolana.',
         substitutes: ['jack_knives', 'hanging_knee_raises']
     },
     hanging_knee_raises: {
@@ -1713,8 +1713,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'Like the monkey you are, hang from the bar, you hairy gorilla. Now raise your knees up, tuck your core, and hopefully you can touch your forehead to your knees. Release slowly down and try to reduce swinging momentum.',
+        muscles: ['brzuch'],
+        description: 'W zwisie na drążku, unoś kolana w górę, podwijając miednicę (celuj kolanami w czoło). Opuszczaj powoli, unikając bujania.',
         substitutes: ['lying_leg_lifts', 'v_crunches']
     },
     mountain_climbers: {
@@ -1725,8 +1725,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'In a push-up position, bring one knee up to touch one elbow, and then resume push-up position. Repeat on the other side. Avoid letting your lower back and bum sag during the motion.',
+        muscles: ['brzuch'],
+        description: 'W pozycji pompki, przyciągaj naprzemiennie kolana do łokci. Nie pozwalaj biodrom opadać.',
         substitutes: ['plank', 'kneeling_cable_crunch']
     },
     kneeling_cable_crunch: {
@@ -1737,8 +1737,8 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'You have sinned and now you must beg for forgiveness. On your knees, hold the cable rope extension behind your head with both hands (ensure it is at it\'s maximum height). Crunch your face down and kiss the ground, then slowly release back up.',
+        muscles: ['brzuch'],
+        description: 'Klęcząc tyłem do wyciągu górnego, trzymaj linę przy głowie. Wykonuj skłony ("allachy"), przyciągając głowę do ziemi i garbiąc plecy.',
         substitutes: ['jack_knives', 'dead_bug']
     },
     bicycle_crunches: {
@@ -1749,8 +1749,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['abs'],
-        description: 'Lying flat on your back, bend your knees at 90 degrees and raise your bent legs above your body so your knees point the ceiling. Now crunch one elbow up to touch the opposite knee, while extending your other leg out straight. Return to the initial position, and then repeat on the other side.',
+        muscles: ['brzuch'],
+        description: 'Leżąc, dłonie przy głowie, nogi w górze ugięte. Przyciągaj lewy łokieć do prawego kolana, prostując lewą nogę. Zmieniaj strony płynnie (rowerek).',
         substitutes: ['dead_bugs', 'hanging_knee_raises']
     },
     banana_hold: {
@@ -1761,8 +1761,8 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'duration', //vs duration    
-        muscles: ['abs'],
-        description: 'Lying flat on your back, pretend that your are a ripe and firm banana. Curve your whole body, crunching your core and lower back flat and firm down into the ground below you, and raise your pointed arms off the ground, pointing out behind your head, and your legs off the ground at a 30 degree angle. Shiver and quiver as your acknowledge your failing core muscles.',
+        muscles: ['brzuch'],
+        description: 'Leżąc na plecach, zrób z ciała "banana". Lędźwia wbite w ziemię, nogi uniesione nisko (30 stopni), ręce wyciągnięte za głową w powietrzu. Trzymaj pozycję.',
         substitutes: ['plank', 'leg_lifts']
     }
 }

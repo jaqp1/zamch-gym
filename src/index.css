@@ -9,8 +9,22 @@
 
 html{
   scroll-behavior: smooth;
+  scrollbar-width: none ;
 }
 
 body{
   background-color: #8f9bbc;
+}
+span{
+  font-family: inherit;
+  font-weight: inherit;
+
+}
+.shadow-scheme1-shadow{
+  box-shadow: 3px 3px 0 0 #8f9bbc;
+}
+
+.shadow-scheme1-shadow:hover{
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 0 #8f9bbc;
 }
