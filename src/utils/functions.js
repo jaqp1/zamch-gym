@@ -1,4 +1,4 @@
-import { EXERCISES, SCHEMES, TEMPOS, WORKOUTS } from "./swoldier"
+import { EXERCISES, SCHEMES, TEMPOS, WORKOUTS } from "./swoldier.js"
 const exercises = exercisesFlattener(EXERCISES)
 
 export function generateWorkout(args) {
@@ -9,7 +9,7 @@ export function generateWorkout(args) {
     let numSets = 5;
     let listOfMuscles;
 
-    if (workout === "individual") {
+    if (workout === "indywidualny") {
         listOfMuscles = muscles;
     } else {
         listOfMuscles = WORKOUTS[workout][muscles[0]];
@@ -18,6 +18,9 @@ export function generateWorkout(args) {
     listOfMuscles = new Set(shuffleArray(listOfMuscles));
     let arrOfMuscles = Array.from(listOfMuscles);
     let scheme = goal
+
+    console.debug('[generateWorkout] input:', { workout, goal, muscles });
+    console.debug('[generateWorkout] listOfMuscles:', arrOfMuscles);
     let sets = SCHEMES[scheme].ratio
         .reduce((acc, curr, index) => {
             //make this compound and exercise muscle -> array of objects and destructure in loop
@@ -64,6 +67,11 @@ export function generateWorkout(args) {
             { compound: {}, accessory: {} }
         );
 
+        console.debug('[generateWorkout] candidate pools sizes', {
+            compound: Object.keys(compoundExercises).length,
+            accessory: Object.keys(accessoryExercises).length,
+        });
+
     const genWOD = sets.map(({ setType, muscleGroup }) => {
         const data =
             setType === "compound" ? compoundExercises : accessoryExercises;
@@ -80,7 +88,12 @@ export function generateWorkout(args) {
         const filteredDataList = Object.keys(filteredObj);
         const filteredOppList = Object.keys(
             setType === "compound" ? accessoryExercises : compoundExercises
-        ).filter((val) => !includedTracker.includes(val));
+        ).filter((val) => {
+            // fallback candidates must not be already included and must target the same muscle group
+            return !includedTracker.includes(val) && exercises[val].muscles.includes(muscleGroup)
+        });
+
+        console.debug('[generateWorkout] choosing for', { setType, muscleGroup, filteredDataListLength: filteredDataList.length, filteredOppListLength: filteredOppList.length });
 
         let randomExercise =
             filteredDataList[
@@ -93,6 +106,7 @@ export function generateWorkout(args) {
         // console.log(randomExercise)
 
         if (!randomExercise) {
+            console.debug('[generateWorkout] no exercise found', { setType, muscleGroup, filteredDataList, filteredOppList });
             return {};
         }
 

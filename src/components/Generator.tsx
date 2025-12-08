@@ -38,7 +38,7 @@ export default function Generator(props) {
         return
       }
 
-      if(poison !== 'individual'){
+      if(poison !== 'indywidualny'){
         setMuscles([muscleGroup])
         setShowModal(false)
         return
@@ -79,7 +79,7 @@ export default function Generator(props) {
             </button>
             {showModal && (
               <div className='flex flex-col px-3 pb-3'>
-                  {(poison === 'individual' ? WORKOUTS[poison] : Object.keys(WORKOUTS[poison])).map((muscleGroup,muscleGroupIndex) => {
+                  {(poison === 'indywidualny' ? WORKOUTS[poison] : Object.keys(WORKOUTS[poison])).map((muscleGroup,muscleGroupIndex) => {
                     return (
                       <button onClick={() => {
                           updateMuscles(muscleGroup)
@@ -104,7 +104,7 @@ export default function Generator(props) {
             )
         })}
         </div>
-        <Button func={updateWorkout} text={"Formulate"}></Button>
+        <Button func={updateWorkout} text={"Generuj"}></Button>
     </SectionWraper>
     
       

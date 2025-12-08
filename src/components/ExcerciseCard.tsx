@@ -21,7 +21,7 @@ export default function ExcerciseCard(props) {
         <p className='text-sm text-slate-400 capitalize'>{excercise.type}</p>
       </div>
       <div className='flex flex-col'>
-        <h3 className='text-slate-400 text-sm'>Muscle Groups</h3>
+        <h3 className='text-slate-400 text-sm'>Partie mięśniowe</h3>
         <p>{excercise.muscles.join(' & ')}</p>
       </div>
 
@@ -35,20 +35,20 @@ export default function ExcerciseCard(props) {
         })}
       </div>
 
-      <div className='grid grid-cols-2 sm:grid-cols-4 sm:place-items-center gap-2'>
-          {['reps','rest','tempo'].map(info => {
-              return (
-                  <div key={info} className='flex flex-col p-2 rounded border-[1.5px] border-solid border-scheme1-950 w-full'>
-                      <h3 className='capitalize text-slate-400 text-sm'>{info === 'reps' ? `${excercise.unit}` : info}</h3>
-                      <p className='font-medium'>{excercise[info]}</p>
-                  </div>
-              )
+        <div className='grid grid-cols-2 sm:grid-cols-4 sm:place-items-center gap-2'>
+          {[{label: 'Powtórzenia', key: 'reps'}, {label: 'Przerwa', key: 'rest'}, {label: 'Tempo', key: 'tempo'}].map(info => {
+            return (
+              <div key={info.key} className='flex flex-col p-2 rounded border-[1.5px] border-solid border-scheme1-950 w-full'>
+                <h3 className='capitalize text-slate-400 text-sm'>{info.label}</h3>
+                <p className='font-medium'>{excercise[info.key]}</p>
+              </div>
+            )
           })}
           <button onClick={handleSetIncrement} className='flex flex-col p-2 rounded border-[1.5px] duration-200 border-solid border-scheme1-400 hover:border-scheme1-700 w-full duration-200'>
-            <h3 clasName='text-slate-400 text-sm capitalize'>Sets completed</h3>
-            <p className='font-medium'>{setsCompleted} / 5</p>
+          <h3 className='text-slate-400 text-sm capitalize'>Ukończone serie</h3>
+          <p className='font-medium'>{setsCompleted} / 5</p>
           </button>
-      </div>
+        </div>
     </div>
   )
 }
