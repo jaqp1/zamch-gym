@@ -91,7 +91,7 @@ export default function Generator(props) {
               </div>
             )}
         </div>
-        <Header index={'03'} title={'Określ cel'} description={"Zadecyduj na czym chciałbyś skupić się najbardziej"}></Header>
+        <Header index={'03'} title={'Cel'} description={"Zadecyduj na czym chciałbyś skupić się najbardziej"}></Header>
         <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
             return (
