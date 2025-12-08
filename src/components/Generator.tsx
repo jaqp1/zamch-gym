@@ -56,8 +56,8 @@ export default function Generator(props) {
   }
 
   return (
-    <SectionWraper  id={'generate'} header={"generate your workout"} title={['It\'s', 'Huge', 'o\'clock']}>
-        <Header index={'01'} title={'Pick your poison'} description={"Select the workout you wish to endure."}></Header>
+    <SectionWraper  id={'generate'} header={"Wygeneruj swój trening!"} title={['“Light weight baby!”']}>
+        <Header index={'01'} title={'Podział treningowy'} description={"Wybierz podział treningowy, który najbardziej ci odpowiada."}></Header>
         <div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
         {Object.keys(WORKOUTS).map((type, typeIndex) => {
             return (
@@ -71,7 +71,7 @@ export default function Generator(props) {
             )
         })}
         </div>
-        <Header index={'02'} title={'Loc on targets'} description={"Select the muscles judged gor annihilation."}></Header>
+        <Header index={'02'} title={'Partie mięśniowe'} description={"Wybierz interesujące cię partie mięśniowe."}></Header>
         <div className='bg-scheme1-600 border-2 border-solid border-scheme1-700 rounded-lg flex flex-col hover:border-scheme1-800 duration-200'>
             <button onClick={toggleModal} className='relative flex items-center justify-center p-3 '>
                 <p className='capitalize'>{muscles.length === 0 ? 'Select muscle groups' : muscles.join(' ')}</p>
@@ -91,7 +91,7 @@ export default function Generator(props) {
               </div>
             )}
         </div>
-        <Header index={'03'} title={'Become Juggernaut'} description={"Select your ultimate objective."}></Header>
+        <Header index={'03'} title={'Określ cel'} description={"Zadecyduj na czym chciałbyś skupić się najbardziej"}></Header>
         <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
             return (
