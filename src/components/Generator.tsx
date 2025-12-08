@@ -74,7 +74,7 @@ export default function Generator(props) {
         <Header index={'02'} title={'Partie mięśniowe'} description={"Wybierz interesujące cię partie mięśniowe."}></Header>
         <div className='bg-scheme1-600 border-2 border-solid border-scheme1-700 rounded-lg flex flex-col hover:border-scheme1-800 duration-200'>
             <button onClick={toggleModal} className='relative flex items-center justify-center p-3 '>
-                <p className='capitalize'>{muscles.length === 0 ? 'Select muscle groups' : muscles.join(' ')}</p>
+                <p className='first-letter:uppercase'>{muscles.length === 0 ? 'wybierz partie mięśniowe' : muscles.join(' ')}</p>
                 <i className="absolute right-3 top-1/2 -translate-y-1/2 fa-solid fa-caret-down"></i>
             </button>
             {showModal && (

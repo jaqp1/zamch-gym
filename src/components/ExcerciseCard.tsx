@@ -17,12 +17,12 @@ export default function ExcerciseCard(props) {
         <h4 className="text-3xl hidden sm:inline sm:text-4xl md:text-5xl font-semibold text-slate-400">
           0{i + 1}
         </h4>
-        <h2 className='capitalize whitespace-nowrap truncate max-w-full text-lg sm:text-xl md:text-2xl flex-1 sm:text-center '>{excercise.name.replaceAll("_"," ")}</h2>
+        <h2 className='first-letter:uppercase whitespace-nowrap truncate max-w-full text-lg sm:text-xl md:text-2xl flex-1 sm:text-center '>{excercise.name.replaceAll("_"," ")}</h2>
         <p className='text-sm text-slate-400 capitalize'>{excercise.type}</p>
       </div>
       <div className='flex flex-col'>
         <h3 className='text-slate-400 text-sm'>Partie mięśniowe</h3>
-        <p>{excercise.muscles.join(' & ')}</p>
+        <p className='first-letter:uppercase'>{excercise.muscles.join(' & ')}</p>
       </div>
 
       <div className='flex flex-col bg-scheme1-600 rounded gap-2'>
