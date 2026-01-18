@@ -10,7 +10,7 @@ function Header(props){
   return(
     <div className='flex flex-col gap-4'>
         <div className='flex items-center justify-center gap-2'>
-          <p className='text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-400'>{index}</p>
+          <p className='text-3xl sm:text-4xl md:text-5xl font-semibold text-white'>{index}</p>
           <h4 className='text-xl sm:text-2xl md:text-3xl'>{title}</h4>
         </div>
         <p className='text-sm sm:text-base mx-auto'>{description}</p>
@@ -56,15 +56,15 @@ export default function Generator(props) {
   }
 
   return (
-    <SectionWraper  id={'generate'} header={"Wygeneruj swój trening!"} title={['“Light weight baby!”']}>
+    <SectionWraper  id={'generate'} header={"Wygeneruj swój trening!"} title={['GO BIG','OR GO HOME']}>
         <Header index={'01'} title={'Podział treningowy'} description={"Wybierz podział treningowy, który najbardziej ci odpowiada."}></Header>
-        <div className='grid grid-cols-2 sm:grid-cols-4 gap-4'>
+        <div className='grid grid-cols-2 sm:grid-cols-4 gap-4 '>
         {Object.keys(WORKOUTS).map((type, typeIndex) => {
             return (
               <button onClick={() => {
                 setMuscles([])
                 setPoison(type)
-              }}  className={`bg-scheme1-600 border-2 px-4 py-3 rounded-lg duration-200 hover:border-scheme1-900 ${type === poison ? 'border-scheme1-900' : 'border-scheme1-700'}`} key={typeIndex}>
+              }}  className={`bg-scheme1-600 border-2 px-4 py-3 rounded-lg duration-200 hover:border-scheme1-900 backdrop-blur-2xl ${type === poison ? 'border-scheme1-900' : 'border-scheme1-700'}`} key={typeIndex}>
 
                   <p className='capitalize'>{type.replaceAll('_'," ")}</p>
               </button>
@@ -72,7 +72,7 @@ export default function Generator(props) {
         })}
         </div>
         <Header index={'02'} title={'Partie mięśniowe'} description={"Wybierz interesujące cię partie mięśniowe."}></Header>
-        <div className='bg-scheme1-600 border-2 border-solid border-scheme1-700 rounded-lg flex flex-col hover:border-scheme1-800 duration-200'>
+        <div className='bg-scheme1-600 border-2 border-solid border-scheme1-700 rounded-lg flex flex-col hover:border-scheme1-800 duration-200 backdrop-blur-2xl'>
             <button onClick={toggleModal} className='relative flex items-center justify-center p-3 '>
                 <p className='first-letter:uppercase'>{muscles.length === 0 ? 'wybierz partie mięśniowe' : muscles.join(' ')}</p>
                 <i className="absolute right-3 top-1/2 -translate-y-1/2 fa-solid fa-caret-down"></i>
@@ -97,7 +97,7 @@ export default function Generator(props) {
             return (
               <button onClick={() => {
                 setGoal(scheme)
-              }}  className={`bg-scheme1-600 border-2 px-4 py-3 rounded-lg duration-200 hover:border-scheme1-900 ${scheme === goal ? 'border-scheme1-900' : 'border-scheme1-700'}`} key={schemeIndex}>
+              }}  className={`bg-scheme1-600 border-2 px-4 py-3 rounded-lg duration-200 hover:border-scheme1-900 backdrop-blur-2xl ${scheme === goal ? 'border-scheme1-900' : 'border-scheme1-700'}`} key={schemeIndex}>
 
                   <p className='capitalize'>{scheme.replaceAll('_'," ")}</p>
               </button>

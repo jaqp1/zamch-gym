@@ -9,7 +9,7 @@ export default function Hero() {
             <h1 className="uppercase font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Generator <span className="text-scheme1-700">WIELKICH</span> chłopów</h1>
         </div>
         
-        <p className='text-sm md:text-base font-light'>Niniejszym przyjmuję do wiadomośći iż podjęte przeze mnie działania mogą prowadzić do <span className="text-scheme1-700 font-medium">niewiarygodnego napęcznienia</span> oraz akceptuję ryzyko przyjęcia miana <span className="text-scheme1-700 font-medium">wielkiego chłopa</span></p>
+        <p className='text-sm md:text-base font-light'>Niniejszym przyjmuję do wiadomośći iż podjęte przeze mnie działania mogą prowadzić do <br/> <span className="text-scheme1-700 font-medium">niewiarygodnego napęcznienia</span> oraz akceptuję ryzyko przyjęcia miana <span className="text-scheme1-700 font-medium">wielkiego chłopa</span></p>
         <Button func={()=>
           window.location.href = '#generate'
         } text={"Akceptuję"}></Button>

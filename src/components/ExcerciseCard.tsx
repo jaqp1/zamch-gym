@@ -12,16 +12,16 @@ export default function ExcerciseCard(props) {
     }
 
   return (
-    <div className='p-4 rounded-md flex flex-col gap-4 bg-scheme1-600 sm:flex-wrap'>
+    <div className='p-4 rounded-md flex flex-col gap-4 bg-scheme1-600 sm:flex-wrap backdrop-blur-2xl'>
       <div className='flex flex-col sm:flex-row sm:items-center sm:flex-wrap gap-x-4'>
-        <h4 className="text-3xl hidden sm:inline sm:text-4xl md:text-5xl font-semibold text-slate-400">
+        <h4 className="text-3xl hidden sm:inline sm:text-4xl md:text-5xl font-semibold text-white">
           0{i + 1}
         </h4>
         <h2 className='first-letter:uppercase whitespace-nowrap truncate max-w-full text-lg sm:text-xl md:text-2xl flex-1 sm:text-center '>{excercise.name.replaceAll("_"," ")}</h2>
-        <p className='text-sm text-slate-400 capitalize'>{excercise.type}</p>
+        <p className='text-sm text-white capitalize'>{excercise.type}</p>
       </div>
       <div className='flex flex-col'>
-        <h3 className='text-slate-400 text-sm'>Partie mięśniowe</h3>
+        <h3 className='text-white text-sm'>Partie mięśniowe</h3>
         <p className='first-letter:uppercase'>{excercise.muscles.join(' & ')}</p>
       </div>
 
@@ -39,13 +39,13 @@ export default function ExcerciseCard(props) {
           {[{label: 'Powtórzenia', key: 'reps'}, {label: 'Przerwa', key: 'rest'}, {label: 'Tempo', key: 'tempo'}].map(info => {
             return (
               <div key={info.key} className='flex flex-col p-2 rounded border-[1.5px] border-solid border-scheme1-950 w-full'>
-                <h3 className='capitalize text-slate-400 text-sm'>{info.label}</h3>
+                <h3 className='capitalize text-white text-sm'>{info.label}</h3>
                 <p className='font-medium'>{excercise[info.key]}</p>
               </div>
             )
           })}
           <button onClick={handleSetIncrement} className='flex flex-col p-2 rounded border-[1.5px] duration-200 border-solid border-scheme1-400 hover:border-scheme1-700 w-full duration-200'>
-          <h3 className='text-slate-400 text-sm capitalize'>Ukończone serie</h3>
+          <h3 className='text-white text-sm capitalize'>Ukończone serie</h3>
           <p className='font-medium'>{setsCompleted} / 5</p>
           </button>
         </div>
