@@ -15,7 +15,7 @@ export const Navbar = () => {
   }
 
   return (
-    <div className='nav flex justify-between align-center mx-8 xl:mx-14 my-7 xl:my-10 text-white mb-0'>
+    <div className='nav flex justify-between align-center mx-10 xl:mx-14 my-10 xl:my-10 text-white mb-0'>
         <div className='flex items-end'>
           <NavLink to='/' className=' nav-logo '><img src={Logo} className='h-16 w-auto  md:h-18 xl:h-22'></img></NavLink>
           </div>
@@ -49,7 +49,7 @@ export const Navbar = () => {
         <button onClick={toggleMenu} className='md:hidden text-3xl p-2 z-50'>
           <i className='bx  bx-menu'></i> 
         </button>
-        <div id='mobileMenu' className='hidden fixed top-24  right-0 left-0 p-5 md:hidden z-40  bg-black/50 backdrop-blur-xl '>
+        <div id='mobileMenu' className='hidden fixed top-32  right-0 left-0 p-5 md:hidden z-40  bg-black/50 backdrop-blur-xl '>
             <ul className="flex flex-col items-center list-none gap-6 text-xs md:text-sm xl:text-base ">
               <li><NavLink to='/' className={({ isActive }) =>
                 isActive 

@@ -3,7 +3,7 @@ import Button from './Button.js'
 
 export default function Hero() {
   return (
-    <div className="min-h-screen flex flex-col gap-10  items-center mt-20 justify-start text-center p-4">
+    <div className="min-h-screen flex flex-col gap-10  items-center mt-20 lg:mt-10 min-[1000px]:mt-25 justify-start text-center p-4">
         <div className="flex flex-col gap-4 max-w-[900px] w-full mx-auto">
             <p>Pora naładować karabiny</p>
             <h1 className="uppercase font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Generator <span className="text-scheme1-700">WIELKICH</span> chłopów</h1>

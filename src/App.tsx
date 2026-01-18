@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-    <div className="root-layout min-h-screen w-full bg-cover bg-center bg-fixed bg-no-repeat" style={{backgroundImage: `url(${mainBg})`}}>
+    <div className="root-layout  w-full bg-fixed bg-no-repeat bg-[100%_100%]  bg-[length:150%] md:bg-[length:80%] " style={{backgroundImage: `url(${mainBg})`}}>
       <Navbar />
       <main>
         <Outlet />
