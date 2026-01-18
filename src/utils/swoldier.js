@@ -1,17 +1,17 @@
 export const TEMPOS = ['3 0 2', '2 2 2', '4 1 1', '5 3 1', '1 0 1', '3 2 1', '2 1 1']
 
 export const SCHEMES = {
-    strength_power: {
+    siła: {
         repRanges: [3, 8],
         ratio: [3, 2],
         rest: [120, 60]
     },
-    growth_hypertrophy: {
+    hipertrofia: {
         repRanges: [8, 15],
         ratio: [2, 3],
         rest: [90, 60]
     },
-    cardiovascular_endurance: {
+    wytrzymałość: {
         repRanges: [12, 30],
         ratio: [2, 4],
         rest: [60, 45]
@@ -19,23 +19,23 @@ export const SCHEMES = {
 }
 
 export const WORKOUTS = {
-    individual: ['bicepsy', 'tricepsy', 'klatka', 'plecy', 'barki', 'czworogłowe', 'dwugłowe', 'pośladki', 'łydki', 'brzuch'],
-    bro_split: {
-        push: ['tricepsy', 'klatka', 'barki'],
-        pull: ['plecy', 'barki', 'bicepsy'],
-        legs: ['pośladki', 'łydki', 'dwugłowe', 'czworogłowe']
+    indywidualny: ['biceps', 'triceps', 'klatka', 'plecy', 'barki', 'czworogłowe', 'dwugłowe', 'pośladki', 'łydki', 'brzuch'],
+    klasyczny_split: {
+        push: ['triceps', 'klatka', 'barki'],
+        pull: ['plecy', 'barki', 'biceps'],
+        nogi: ['pośladki', 'łydki', 'dwugłowe', 'czworogłowe']
     },
-    bodybuilder_split: {
-        chest: ['klatka'],
-        back: ['plecy'],
-        shoulders: ['barki'],
-        legs: ['pośladki', 'czworogłowe', 'dwugłowe', 'łydki'],
-        arms: ['bicepsy', 'tricepsy'],
-        abs: ['brzuch']
+    split_kulturystyczny: {
+        klatka: ['klatka'],
+        plecy: ['plecy'],
+        barki: ['barki'],
+        nogi: ['pośladki', 'czworogłowe', 'dwugłowe', 'łydki'],
+        ramiona: ['biceps', 'triceps'],
+        brzuch: ['brzuch']
     },
-    upper_lower: {
-        upper: ['tricepsy', 'bicepsy', 'barki', 'klatka', 'plecy'],
-        lower: ['czworogłowe', 'łydki', 'dwugłowe', 'pośladki']
+    góra_dół: {
+        góra: ['triceps', 'biceps', 'barki', 'klatka', 'plecy'],
+        dół: ['czworogłowe', 'łydki', 'dwugłowe', 'pośladki']
     }
 }
 
@@ -165,7 +165,7 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['klatka', 'tricepsy'],
+        muscles: ['klatka', 'triceps'],
         description: 'W pozycji na poręczach, pochyl się do przodu nad dłońmi i powoli opuszczaj ciało, aż łokcie będą równoległe do podłoża. Następnie wypchnij się w górę. Odwodzenie łokci maksymalnie do 45 stopni.',
         substitutes: ['Chair dip']
     },
@@ -1330,7 +1330,7 @@ export const EXERCISES = {
             alternating: 'Zacznij chwytem neutralnym, kończąc z dłonią w supinacji (do sufitu).'
         },
         unit: 'reps', //vs duration    
-        muscles: ['bicepsy'],
+        muscles: ['biceps'],
         description: 'Siedząc lub stojąc z hantlami. Uginaj ramiona (razem lub naprzemiennie) do pełnego zgięcia łokcia. Minimalizuj bujanie i pracę barków.',
         substitutes: ['hammer curls']
     },
@@ -1376,7 +1376,7 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['bicepsy'],
+        muscles: ['biceps'],
         description: 'Używając liny (sznurów) na wyciągu dolnym, chwyć końce chwytem neutralnym. Uginaj ramiona do wewnątrz i w górę.',
         substitutes: ['dumbbell hammer curls']
     },
@@ -1393,7 +1393,7 @@ export const EXERCISES = {
             alternating: 'Zacznij neutralnie, kończ z supinacją.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['bicepsy'],
+        muscles: ['biceps'],
         description: 'Leżąc klatką na ławce skośnej, hantle w dłoniach. Wykonuj uginanie naprzemienne (z supinacją w szczycie), lekko kierując hantle pod ławkę.',
         substitutes: ['barbell curls']
     },
@@ -1410,7 +1410,7 @@ export const EXERCISES = {
             standard: 'Chwyt na szerokość barków.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['bicepsy'],
+        muscles: ['biceps'],
         description: 'Trzymaj sztangę podchwytem. Uginaj ramiona, redukując pracę barków i bujanie.',
         substitutes: ['dumbbell curls']
     },
@@ -1426,7 +1426,7 @@ export const EXERCISES = {
             barbell: 'Wersja ze sztangą, chwyt nieco szerzej niż barki.',
         },
         unit: 'reps', //vs duration    
-        muscles: ['bicepsy'],
+        muscles: ['biceps'],
         description: 'Trzymając ciężar podchwytem, "ciągnij" (drag) go w górę wzdłuż tułowia, cofając łokcie w tył. Stoisz prosto. To ruch podobny do wiosłowania, ale w pionie.',
         substitutes: ['dumbbell curls']
     },
@@ -1438,7 +1438,7 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['bicepsy'],
+        muscles: ['biceps'],
         description: 'Trzymając uchwyt wyciągu dolnego w jednej ręce, uginaj ramię w górę i do wewnątrz, kończąc dłonią na środku klatki.',
         substitutes: ['hammer curl']
     },
@@ -1455,7 +1455,7 @@ export const EXERCISES = {
             overhand: 'Sztanga prosta lub łamana, nachwyt.'
         },
         unit: 'reps', //vs duration    
-        muscles: ['bicepsy'],
+        muscles: ['biceps'],
         description: 'Uginanie na modlitewniku (ramiona oparte pod kątem 45 stopni). Warto zrobić mikro-pauzę na dole ruchu.',
         substitutes: ['barbell curl']
     },
@@ -1467,7 +1467,7 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['bicepsy'],
+        muscles: ['biceps'],
         description: 'Używając drążka na wyciągu dolnym, chwyć go podchwytem i uginaj ramiona, minimalizując ruch barków.',
         substitutes: ['dumbbell hammer curls']
     },
@@ -1479,7 +1479,7 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['tricepsy'],
+        muscles: ['triceps'],
         description: 'Wyciąg górny. Łokcie przy tułowiu, prostuj ramiona w dół. Łokcie nieruchomo w przestrzeni. Na dole ruchu rozszerz końce liny, kierując dłonie w dół.',
         substitutes: ['bar cable pushdown']
     },
@@ -1491,7 +1491,7 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['tricepsy'],
+        muscles: ['triceps'],
         description: 'Wyciąg górny, drążek prosty. Łokcie przy tułowiu, prostuj ramiona w dół. Łokcie nieruchomo.',
         substitutes: ['rope cable pushdown']
     },
@@ -1508,7 +1508,7 @@ export const EXERCISES = {
             underhand: 'Podchwyt (dłoń do sufitu).'
         },
         unit: 'reps', //vs duration    
-        muscles: ['tricepsy'],
+        muscles: ['triceps'],
         description: 'Wyciąg górny. Łokieć przy biodrze, prostuj ramię w dół.',
         substitutes: ['rope cable pushdown']
     },
@@ -1520,7 +1520,7 @@ export const EXERCISES = {
             equipment: ['barbell']
         },
         unit: 'reps', //vs duration    
-        muscles: ['tricepsy'],
+        muscles: ['triceps'],
         description: 'Leżąc płasko lub na skosie, sztanga nad głową. Zegnij łokcie, opuszczając ciężar do czoła lub za głowę, a następnie wyprostuj. Łokcie wąsko.',
         substitutes: ['face press']
     },
@@ -1532,7 +1532,7 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['tricepsy'],
+        muscles: ['triceps'],
         description: 'W pozycji plank (ręce wyżej, np. na ławce), dłonie węziej niż barki. Ugnij łokcie, opuszczając twarz do ławki, następnie wyprostuj. Łokcie prowadź wąsko pod siebie.',
         substitutes: ['overhead_skull_crushers']
     },
@@ -1544,7 +1544,7 @@ export const EXERCISES = {
             equipment: ['barbell', 'dumbbell', 'bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['tricepsy'],
+        muscles: ['triceps'],
         description: 'Siedząc pionowo, ciężar (sztanga, hantel, wyciąg) za głową, łokcie w górze. Prostuj ramiona nad głowę.',
         substitutes: ['rope cable pushdown']
     },
@@ -1556,7 +1556,7 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['tricepsy'],
+        muscles: ['triceps'],
         description: 'Dłonie na ławce za plecami, nogi wyprostowane przed sobą. Opuszczaj pośladki w dół przed ławką, łokcie wąsko skierowane w tył. Wypchnij się w górę.',
         substitutes: ['rope cable pushdown']
     },
@@ -1568,7 +1568,7 @@ export const EXERCISES = {
             equipment: ['dumbbells']
         },
         unit: 'reps', //vs duration    
-        muscles: ['tricepsy'],
+        muscles: ['triceps'],
         description: 'Leżąc (płasko/skos), hantle nad głową. Opuszczaj hantle po bokach czoła, a następnie wyprostuj. Zacznij chwytem neutralnym.',
         substitutes: ['face press']
     },
@@ -1580,7 +1580,7 @@ export const EXERCISES = {
             equipment: []
         },
         unit: 'reps', //vs duration    
-        muscles: ['tricepsy'],
+        muscles: ['triceps'],
         description: 'Pompki, dłonie złączone tak, by palce wskazujące i kciuki tworzyły "diament". Łokcie blisko ciała.',
         substitutes: ['face press']
     },
@@ -1592,7 +1592,7 @@ export const EXERCISES = {
             equipment: ['bands']
         },
         unit: 'reps', //vs duration    
-        muscles: ['tricepsy'],
+        muscles: ['triceps'],
         description: 'Leżąc (płasko/skos), hantle nad głową. Opuszczaj hantle po bokach czoła, a następnie wyprostuj. (Uwaga: Opis w oryginale powtórzony z dumbbell skull crushers - sprawdź poprawność ćwiczenia, nazwa sugeruje odpychanie linki jednorącz).',
         substitutes: ['face press']
     },

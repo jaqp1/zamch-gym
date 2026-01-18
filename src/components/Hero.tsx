@@ -3,16 +3,16 @@ import Button from './Button.js'
 
 export default function Hero() {
   return (
-    <div className="min-h-screen flex flex-col gap-10 items-center justify-center text-center p-4">
+    <div className="min-h-screen flex flex-col gap-10  items-center mt-20 lg:mt-10 min-[1000px]:mt-25 justify-start text-center p-4">
         <div className="flex flex-col gap-4 max-w-[900px] w-full mx-auto">
-            <p>IT'S TIME TO GET</p>
-            <h1 className="uppercase font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Swole<span className="text-scheme1-700">normous</span></h1>
+            <p>Pora naładować karabiny</p>
+            <h1 className="uppercase font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">Generator <span className="text-scheme1-700">WIELKICH</span> chłopów</h1>
         </div>
         
-        <p className='text-sm md:text-base font-light'>I hereby acknowledgement that I may become <span className="text-scheme1-700 font-medium">unbeliveably swolenormous</span> and accept all risks of becoming the local <span className="text-scheme1-700 font-medium">mass montrosity</span>, afflicted with severe body dismorphia, unable to fit through doors.</p>
+        <p className='text-sm md:text-base font-light'>Niniejszym przyjmuję do wiadomośći iż podjęte przeze mnie działania mogą prowadzić do <br/> <span className="text-scheme1-700 font-medium">niewiarygodnego napęcznienia</span> oraz akceptuję ryzyko przyjęcia miana <span className="text-scheme1-700 font-medium">wielkiego chłopa</span></p>
         <Button func={()=>
           window.location.href = '#generate'
-        } text={"Accept & Begin"}></Button>
+        } text={"Akceptuję"}></Button>
     </div>
   )
 }

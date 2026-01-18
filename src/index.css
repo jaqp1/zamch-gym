@@ -13,7 +13,7 @@ html{
 }
 
 body{
-  background-color: #8f9bbc;
+  background-color: black;
 }
 span{
   font-family: inherit;
@@ -21,10 +21,10 @@ span{
 
 }
 .shadow-scheme1-shadow{
-  box-shadow: 3px 3px 0 0 #8f9bbc;
+  box-shadow: 3px 3px 0 0 #acacac;
 }
 
 .shadow-scheme1-shadow:hover{
   transform: translate(-3px, -3px);
-  box-shadow: 6px 6px 0 0 #8f9bbc;
+  box-shadow: 6px 6px 0 0 #acacac;
 }
