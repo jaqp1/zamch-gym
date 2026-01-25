@@ -11,6 +11,7 @@ import PageNotFound from './routes/PageNotFound';
 import Rules from './routes/Rules';
 import Contact from './routes/Contact';
 import TrainingGenerator from './routes/TrainingGenerator';
+import Home from './routes/Home';
 
 const router = createBrowserRouter([
     {
@@ -31,7 +32,11 @@ const router = createBrowserRouter([
           element: <Contact />
         },
         {
-          path: 'trainingGenerator',
+          path: '/home',
+          element: <Home />
+        },
+        {
+          path: '/trainingGenerator',
           element: <TrainingGenerator />
         }
       ]

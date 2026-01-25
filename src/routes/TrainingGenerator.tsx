@@ -3,8 +3,9 @@ import Hero from '../components/Hero.tsx'
 import Generator from '../components/Generator.tsx'
 import Workout from '../components/Workout.tsx'
 import { generateWorkout } from '../utils/functions'
+import bg from '../assets/arnold_conquer_no_sign_bq_final.png'
 
-function App() {
+function TrainingGenerator() {
 
   const [workout, setWorkout] = useState(null)
   const [poison, setPoison] = useState('indywidualny');
@@ -22,7 +23,7 @@ function App() {
 
 
   return (
-    <main className='min-h-screen flex flex-col bg-gradient-to-r from-scheme1-400 to-scheme1-600 text-white text-sm sm:text-base'>
+    <section className='min-h-screen flex flex-col  text-white text-sm sm:text-base bg-fixed bg-no-repeat bg-[100%_100%]  bg-[length:150%] md:bg-[length:80%]'  style={{backgroundImage: `url(${bg})`}}>
       <Hero></Hero>
       <Generator 
       poison={poison} 
@@ -34,8 +35,8 @@ function App() {
       updateWorkout={updateWorkout}
       ></Generator>
       {workout && (<Workout workout={workout} />)}
-    </main>
+    </section>
   )
 }
 
-export default App
+export default TrainingGenerator
