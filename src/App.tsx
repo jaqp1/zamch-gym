@@ -13,7 +13,7 @@ function App() {
   const currentOutlet = useOutlet();
 
   const animations = {
-  pageInitial: { opacity: 0, x: 100 },
+  pageInitial: { opacity: 0, x: 0 },
   pageAnimate: { opacity: 1, x: 0 },
   pageExit:    { opacity: 0, x: -100 }
 };
