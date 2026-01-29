@@ -24,6 +24,7 @@ function TrainingGenerator() {
 
   return (
     <section className='min-h-screen flex flex-col  text-white text-sm sm:text-base bg-fixed bg-no-repeat bg-[100%_100%]  bg-[length:150%] md:bg-[length:80%]'  style={{backgroundImage: `url(${bg})`}}>
+      <div className='fixed left-0 right-0 top-0 h-32 w-full shadow-[0_10px_60px_40px_rgba(0,0,0,1)] bg-black z-50'></div>
       <Hero></Hero>
       <Generator 
       poison={poison} 
