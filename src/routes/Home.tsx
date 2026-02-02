@@ -1,15 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import bg from '../assets/IMAGE_20260124_203151_145_black_white.jpg'
 import { motion, useScroll, useTransform} from 'motion/react'
 import downArrow from '../assets/arrow_down.png'
+import rightArrow from '../assets/arrow_right.png'
+import znakOsp from '../assets/znak_zosp.png'
 import { useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 
 function Home() {
 
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
   const blurOpacity = useTransform(scrollY, [0,300], [0,1]);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
   const location = useLocation()
+
+  const secondSectionRef = useRef<HTMLDivElement>(null);
 
    useEffect(() => {
       const toggleVisibility = () => {
@@ -26,12 +31,14 @@ function Home() {
   
     }, []);
 
-    const scrollToBottom = () => {
-    window.scrollTo({
-      top: 950,
-      behavior: 'smooth'
-    });
+    const scrollToSection = () => {
+      secondSectionRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'end'
+      });
   };
+
+  const logoOpacity = useTransform(scrollYProgress, [0.95,1], [0,1])
 
     
 
@@ -47,18 +54,39 @@ function Home() {
         <div className={`h-auto w-auto my-auto  duration-300 ${isVisible ? ` md:pointer-events-auto` : `opacity-0 md:pointer-events-none`}`}>
           <h1 className='text-4xl text-center font-semibold'>Twoja sportowa przygoda <br />zaczyna się tutaj</h1>
         </div>
-        <button onClick={scrollToBottom} className={`relative duration-300  ${isVisible ? ` md:pointer-events-auto` : `opacity-0 md:pointer-events-none`}`}>
+        <button onClick={scrollToSection} className={`relative duration-300  ${isVisible ? ` md:pointer-events-auto` : `opacity-0 md:pointer-events-none`}`}>
             <img src={downArrow}  className='w-20 pointer-events-auto '></img>
         </button>
       </div>    
-      <div className='w-full flex flex-col p-10 z-50 min-h-screen my-auto'>
-        <h2 className='self-start mt-70 text-3xl font-semibold'>Witamy na naszej siłowni!</h2><br />
+      <div ref={secondSectionRef} className='w-full flex flex-col p-8 z-50 min-h-screen my-auto'>
+        <h2 className='self-start mt-30 text-3xl font-semibold'>Witamy na naszej siłowni!</h2><br />
         <h3 className='text-gray-400 text-sm'>Jedyne takie miejsce w okolicy. Stworzone przez mieszkańców - dla mieszkańców. Bez karnetów, bez zbędnych formalności – po prostu przyjdź i trenuj</h3><br />
         <p className='text-sm text-gray-400'>Na naszej siłowni każdy znajdzie coś dla siebie. Niezależnie od tego czy chcesz zostać mistrzem trójboju czy po prostu chcesz na chwilę odejsć od komputera i rozruszać organizm. U nas znajdziesz sprzęt, który sprosta twoim wymaganiom.</p>
-      </div>
+          <NavLink to='/about' className={`mt-8 bg-white rounded-2xl text-black justify-center p-1 flex flex-row gap-2 font-semibold`}>O siłowni<img src={rightArrow} className='w-5'></img></NavLink>
+        </div>
+     
       <div className='fixed left-0 right-0 top-0 h-60 w-full bg-gradient-to-b from-black z-50'></div>
-      <div className='fixed left-0 right-0 bottom-0 h-40 w-full bg-gradient-to-t from-black z-40'></div>
-      <div className="h-[200vh] w-full"></div>
+      <div 
+        className='fixed flex flex-row items-end left-0 right-0 bottom-0 h-40 w-full bg-gradient-to-t from-black z-40 p-5'
+        >
+          <motion.div
+          className='flex flex-row w-full items-end'
+          style={{
+            opacity: logoOpacity
+          }}
+          >
+            <img className='w-10' src={znakOsp}></img>
+            <p className='text-gray-400 font-semibold text-xs p-3'>
+              OSP Zamch
+            </p>
+            <p className='text-gray-400 font-semibold text-xs p-3 justify-end ml-auto'>
+              © 2026 Jakub Wenek Wszelkie prawa zastrzeżone.
+            </p>
+          </motion.div>
+          
+      </div>
+      {/* <div className="h-[200vh] w-full"></div> */}
+      
     </section>
   )
 }

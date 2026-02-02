@@ -20,7 +20,7 @@ export const Navbar = () => {
   return (
     <div className={`nav z-9999 fixed left-0 right-0 flex justify-between align-center mx-10 xl:mx-14 my-10 xl:my-10 text-white mb-0 bg-transparent`}>
         <div className='flex items-end z-9999'>
-          <NavLink to='/home' className=' nav-logo '><img src={Logo} className='h-16 w-auto  md:h-18 xl:h-22'></img></NavLink>
+          <NavLink to='/home' className=' nav-logo '><img src={Logo} className='h-12 w-auto  md:h-18 xl:h-22'></img></NavLink>
           </div>
         <ul className="hidden md:flex items-center list-none gap-0 xl:gap-2 text-xs md:text-sm xl:text-base ">
             <li><NavLink to='/home' className={({ isActive }) =>
