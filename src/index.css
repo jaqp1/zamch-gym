@@ -9,8 +9,17 @@
 
 html{
   scroll-behavior: smooth;
-  scrollbar-width: none ;
+  scrollbar-width: none;
 }
+/* ::-webkit-scrollbar{
+  width: 12px;
+}
+::-webkit-scrollbar-track{
+  background: black;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+} */
 
 body{
   background-color: black;
