@@ -18,7 +18,7 @@ function About() {
 
 
   return (
-    <section className='min-h-screen sticky bg-cover bg-center flex flex-col items-center justify-center text-white bg-no-repeat'  >
+    <section className='min-h-svh sticky bg-cover bg-center flex flex-col items-center justify-center text-white bg-no-repeat'  >
       
       <motion.div className='p-4 absolute inset-0 z-10  rounded-md flex flex-col  gap-4 sm:flex-wrap backdrop-blur-md w-full h-full' >
       </motion.div>
