@@ -4,7 +4,6 @@ import CarretUp from './assets/caret-arrow-up.png'
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from 'motion/react'
 
-
 function App() {
 
 
@@ -41,11 +40,21 @@ function App() {
     });
   };
 
+  const handleExitComplete = () => {
+  
+    if (typeof window !== "undefined") {
+      document.documentElement.style.scrollBehavior = "auto";
+      window.scrollTo({ top: 0 });
+      document.documentElement.style.scrollBehavior = "";
+    }
+  };
+
 
   return (
     <div className="root-layout  w-full bg-fixed bg-no-repeat bg-[100%_100%]  bg-[length:150%] md:bg-[length:80%] ">
+      
       <Navbar />
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="wait" onExitComplete={handleExitComplete}>
         <motion.main 
         key={location.pathname}
         variants={animations}
