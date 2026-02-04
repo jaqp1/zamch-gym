@@ -52,7 +52,7 @@ export const Navbar = () => {
         <button onClick={toggleMenu} className='md:hidden text-3xl p-2 z-50'>
           <i className='bx  bx-menu'></i> 
         </button>
-        <div id='mobileMenu' className='hidden fixed top-0 right-0 left-0 p-5 pt-36 rounded-2xl md:hidden z-40  bg-black/50 backdrop-blur-xl '>
+        <div id='mobileMenu' className='hidden fixed top-0 right-0 left-0 p-7 pt-32  rounded-2xl md:hidden z-40  bg-black/50 backdrop-blur-xl '>
             <ul className="flex flex-col items-center list-none gap-6 text-xs md:text-sm xl:text-base ">
               <li><NavLink to='/home' className={({ isActive }) =>
                 isActive 
