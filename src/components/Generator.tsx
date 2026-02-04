@@ -1,19 +1,21 @@
-import React from 'react'
 import SectionWraper from './SectionWraper.js'
 import { SCHEMES, WORKOUTS } from '../utils/swoldier.js'
 import { useState} from 'react'
 import Button from './Button.js'
+interface HeaderProps {
+  index: string;
+  title: string;
+  description: string;
+}
 
-
-function Header(props){
-  const { index, title, description} = props
-  return(
+function Header({ index, title, description }: HeaderProps) {
+  return (
     <div className='flex flex-col gap-4'>
-        <div className='flex items-center justify-center gap-2'>
-          <p className='text-3xl sm:text-4xl md:text-5xl font-semibold text-white'>{index}</p>
-          <h4 className='text-xl sm:text-2xl md:text-3xl'>{title}</h4>
-        </div>
-        <p className='text-sm sm:text-base mx-auto'>{description}</p>
+      <div className='flex items-center justify-center gap-2'>
+        <p className='text-3xl sm:text-4xl md:text-5xl font-semibold text-white'>{index}</p>
+        <h4 className='text-xl sm:text-2xl md:text-3xl'>{title}</h4>
+      </div>
+      <p className='text-sm sm:text-base mx-auto'>{description}</p>
     </div>
   )
 }
