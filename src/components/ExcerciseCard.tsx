@@ -1,7 +1,22 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
+interface Excercise {
+  name: string
+  type: string
+  muscles: string[]
+  description: string
+  reps?: string
+  rest?: string
+  tempo?: string
+  [key: string]: any
+}
 
-export default function ExcerciseCard(props) {
+interface Props {
+  excercise: Excercise
+  i: number
+}
+
+export default function ExcerciseCard(props: Props) {
 
     const { excercise, i } = props
 
