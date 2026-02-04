@@ -1,12 +1,10 @@
-import React from 'react'
-import bg from '../assets/IMAGE_20260124_203151_145_black_white.jpg'
 import znakOSP from '../assets/znak_zosp.png'
 import { motion, useScroll, useTransform } from 'motion/react';
 
 
 function Rules() {
 
-  const { scrollY, scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll();
   const logoOpacity = useTransform(scrollYProgress, [0.98,1], [0,1])
 
   return (

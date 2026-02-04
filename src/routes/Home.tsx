@@ -1,10 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import bg from '../assets/IMAGE_20260124_203151_145_black_white.jpg'
 import { motion, useScroll, useTransform} from 'motion/react'
 import downArrow from '../assets/arrow_down.png'
 import rightArrow from '../assets/arrow_right.png'
 import znakOsp from '../assets/znak_zosp.png'
-import { useLocation } from 'react-router-dom';
 import { NavLink } from 'react-router-dom'
 import wandale from '../assets/Klip wideo bez tytułu ‐ Wykonano za pomocą Clipchamp.mp4'
 
@@ -13,7 +12,6 @@ function Home() {
   const { scrollY, scrollYProgress } = useScroll();
   const blurOpacity = useTransform(scrollY, [0,300], [0,1]);
   const [isVisible, setIsVisible] = useState(true);
-  const location = useLocation()
 
   const secondSectionRef = useRef<HTMLDivElement>(null);
 

@@ -1,4 +1,4 @@
-import {NavLink, useLocation} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import 'boxicons/css/boxicons.min.css'
 import Logo from '../assets/zamch_gym_logo_no_bg.png'
 
@@ -13,9 +13,6 @@ export const Navbar = () => {
       mobileMenu?.classList.add('hidden');
     }
   }
-
-  const currentOutlet = useLocation();
-  const currentPath = currentOutlet.pathname
 
   return (
     <div className={`nav z-9999 fixed left-0 right-0 flex justify-between align-center mx-10 xl:mx-14 my-10 xl:my-10 text-white mb-0 bg-transparent`}>

@@ -9,7 +9,7 @@ function TrainingGenerator() {
 
   const [workout, setWorkout] = useState(null)
   const [poison, setPoison] = useState('indywidualny');
-  const [muscles, setMuscles] = useState([]);
+  const [muscles, setMuscles] = useState<string[]>([]);
   const [goal, setGoal] = useState('siła');
 
   function updateWorkout(){

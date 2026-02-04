@@ -1,4 +1,5 @@
-import React, { useState, FormEvent, ChangeEvent } from 'react';
+import React, { useState } from 'react';
+import type { FormEvent } from 'react';
 import ronnieCalling from '../assets/ronnieCalling.png'
 import { motion, useScroll, useTransform } from 'motion/react'
 import znakOSP from '../assets/znak_zosp.png'
@@ -78,6 +79,7 @@ const Contact: React.FC = () => {
         });
       }
     } catch (error) {
+      console.error("Error occurred:", error);
       setButtonText("Wyślij");
       setStatus({ success: false, message: 'Błąd sieci' });
     }

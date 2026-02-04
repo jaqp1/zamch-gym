@@ -1,7 +1,8 @@
-import SectionWraper from './SectionWraper.js'
-import { SCHEMES, WORKOUTS } from '../utils/swoldier.js'
-import { useState} from 'react'
-import Button from './Button.js'
+import SectionWraper from './SectionWraper'
+import { SCHEMES, WORKOUTS } from '../utils/swoldier'
+import { useState } from 'react'
+import Button from './Button'
+
 interface HeaderProps {
   index: string;
   title: string;
@@ -20,16 +21,26 @@ function Header({ index, title, description }: HeaderProps) {
   )
 }
 
-export default function Generator(props) {
+interface GeneratorProps {
+  muscles: string[];
+  setMuscles: (m: string[]) => void;
+  poison: string;
+  setPoison: (p: string) => void;
+  goal: string;
+  setGoal: (g: string) => void;
+  updateWorkout: () => void;
+}
 
-  const [showModal, setShowModal] = useState(false);
-  const { muscles, setMuscles, poison, setPoison, goal, setGoal, updateWorkout} = props
+export default function Generator(props: GeneratorProps) {
+
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const { muscles, setMuscles, poison, setPoison, goal, setGoal, updateWorkout } = props
  
   function toggleModal(){
       setShowModal(!showModal);
   }
 
-  function updateMuscles(muscleGroup){
+  function updateMuscles(muscleGroup: string){
 
     if(muscles.includes(muscleGroup)){
       setMuscles(muscles.filter(val => val !== muscleGroup))
@@ -58,7 +69,7 @@ export default function Generator(props) {
   }
 
   return (
-    <SectionWraper  id={'generate'} header={"Wygeneruj swój trening!"} title={['GO BIG','OR GO HOME']}>
+    <SectionWraper  id={'generate'} header={"Wygeneruj swój trening!"} title={['GO BIG', 'OR GO HOME', '']}>
         <Header index={'01'} title={'Podział treningowy'} description={"Wybierz podział treningowy, który najbardziej ci odpowiada."}></Header>
         <div className='grid grid-cols-2 sm:grid-cols-4 gap-4 '>
         {Object.keys(WORKOUTS).map((type, typeIndex) => {
@@ -68,7 +79,7 @@ export default function Generator(props) {
                 setPoison(type)
               }}  className={`bg-scheme1-600 border-2 px-4 py-3 rounded-lg duration-200 hover:border-scheme1-900 backdrop-blur-2xl ${type === poison ? 'border-scheme1-900' : 'border-scheme1-700'}`} key={typeIndex}>
 
-                  <p className='capitalize'>{type.replaceAll('_'," ")}</p>
+                  <p className='capitalize'>{type.replace(/_/g, " ")}</p>
               </button>
             )
         })}
@@ -81,12 +92,12 @@ export default function Generator(props) {
             </button>
             {showModal && (
               <div className='flex flex-col px-3 pb-3'>
-                  {(poison === 'indywidualny' ? WORKOUTS[poison] : Object.keys(WORKOUTS[poison])).map((muscleGroup,muscleGroupIndex) => {
+                  {(poison === 'indywidualny' ? WORKOUTS[poison] : Object.keys(WORKOUTS[poison as keyof typeof WORKOUTS])).map((muscleGroup,muscleGroupIndex) => {
                     return (
                       <button onClick={() => {
                           updateMuscles(muscleGroup)
                       }} key={muscleGroupIndex} className={`hover:text-scheme1-900 text-scheme1-700 duration-200 ${muscles.includes(muscleGroup) ? 'text-scheme1-900' : '' }`}>
-                          <p className='uppercase '>{muscleGroup.replaceAll('_'," ")}</p>
+                          <p className='uppercase '>{muscleGroup.replace(/_/g, " ")}</p>
                       </button>
                     )
                   })}
@@ -101,7 +112,7 @@ export default function Generator(props) {
                 setGoal(scheme)
               }}  className={`bg-scheme1-600 border-2 px-4 py-3 rounded-lg duration-200 hover:border-scheme1-900 backdrop-blur-2xl ${scheme === goal ? 'border-scheme1-900' : 'border-scheme1-700'}`} key={schemeIndex}>
 
-                  <p className='capitalize'>{scheme.replaceAll('_'," ")}</p>
+                  <p className='capitalize'>{scheme.replace(/_/g, " ")}</p>
               </button>
             )
         })}
