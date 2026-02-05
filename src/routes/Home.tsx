@@ -57,11 +57,11 @@ function Home() {
       </motion.div>
       <div className='p-4 absolute inset-0 z-9 pointer-events-none w-full h-full bg-black opacity-50' >
       </div>
-      <div className='w-full min-h-screen flex flex-col p-10 items-center justify-center z-50'>
-        <div className={`h-auto w-auto my-auto  duration-300 ${isVisible ? ` md:pointer-events-auto` : `opacity-0 md:pointer-events-none`}`}>
+      <div className='w-full min-h-screen flex flex-col p-10 items-center justify-start pt-40 z-50'>
+        <div className={`h-auto w-auto duration-300 ${isVisible ? ` md:pointer-events-auto` : `opacity-0 md:pointer-events-none`}`}>
           <h1 className='text-4xl text-center font-semibold'>Twoja sportowa przygoda <br />zaczyna się tutaj</h1>
         </div>
-        <button onClick={scrollToSection} className={`relative duration-300  ${isVisible ? ` md:pointer-events-auto` : `opacity-0 md:pointer-events-none`}`}>
+        <button onClick={scrollToSection} className={`my-auto relative duration-300  ${isVisible ? ` md:pointer-events-auto` : `opacity-0 md:pointer-events-none`}`}>
             <img src={downArrow}  className='w-20 pointer-events-auto '></img>
         </button>
       </div>    
