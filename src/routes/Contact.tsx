@@ -46,7 +46,6 @@ const Contact: React.FC = () => {
     setButtonText("Wysyłanie...");
 
     const formData = new FormData(event.currentTarget);
-    // Pamiętaj o podmianie klucza na swój
     formData.append("access_key", "ccb4bca3-4aa0-4f61-9eb3-0bbff39910f6");
 
     try {
@@ -85,7 +84,6 @@ const Contact: React.FC = () => {
     }
   };
 
-  // Wspólne style dla inputów i textarea (z Twojego CSS)
   const inputClasses = `
     w-full bg-scheme1-600  px-4 py-3 rounded-lg hover:border-scheme1-900 backdrop-blur-2xl  border-1 border-zinc-700 rounded-[20px] text-white
     px-[26px] py-2 font-medium text-sm tracking-[0.8px] 
@@ -96,23 +94,19 @@ const Contact: React.FC = () => {
 
   return (
     <section 
-      className="p-5 relative" 
+      className="p-5 relative " 
       id="connect"
     >
        <div className='fixed left-0 right-0 top-0 h-25 w-full shadow-[0_10px_60px_40px_rgba(0,0,0,1)] bg-black z-50'></div>
-      <div className=" mb-20 px-4 max-w-7xl bg-zinc-950 border-1 border-zinc-700 rounded-2xl  mt-30 pb-15 sm:mt-[8%]">
+      <div className="mx-auto mb-20 px-4 max-w-7xl bg-zinc-950 border-1 border-zinc-700 rounded-2xl md:p-10 md:mt-40 md:justify-center mt-30 pb-15 sm:mt-[8%]">
         <div className="flex flex-col md:flex-row  items-center justify-between gap-10">
-          
-          {/* Lewa kolumna: Obrazek */}
-          <div className="relative w-full md:w-1/2 flex justify-center md:justify-start ">
+          <div className="relative md:static w-full md:w-2/4 flex justify-center md:justify-start">
             <img 
-              src={ronnieCalling}
-              alt="Contact Us" 
-              className="w-[100%] h-auto object-contain absolute top-30 "
+                src={ronnieCalling}
+                alt="Contact Us" 
+                className="w-[100%] h-auto object-contain absolute top-30 md:static md:mt-0 md:ml-5"
             />
           </div>
-
-          {/* Prawa kolumna: Formularz */}
           <div className="w-full md:w-1/2">
             <h2 className="text-3xl font-bold text-white leading-tight">
               Masz pytanie?
@@ -120,7 +114,6 @@ const Contact: React.FC = () => {
             <h3 className='text-zinc-500 mb-30'>Skontaktuj się z nami!</h3>
             
             <form onSubmit={handleSubmit} className="w-full">
-              {/* Grid dla pól formularza (odpowiednik Row/Col) */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-2 gap-y-0">
                 
                 <div className="w-full">
@@ -170,8 +163,6 @@ const Contact: React.FC = () => {
                     className={inputClasses}
                   />
                 </div>
-
-                {/* Textarea na całą szerokość */}
                 <div className="col-span-1 sm:col-span-2 mt-2">
                   <textarea
                     rows={6}
@@ -180,27 +171,21 @@ const Contact: React.FC = () => {
                     onChange={(e) => onFormUpdate('message', e.target.value)}
                     name="message"
                     required
-                    className={`${inputClasses} resize-none`} // resize-none opcjonalnie
+                    className={`${inputClasses} resize-none`} 
                   />
                   
-                  {/* Przycisk z animacją 'slide' (Twoje ::before) */}
                   <button 
                     type="submit" 
                     className="px-8 py-4 mx-auto rounded-md  border-zinc-700 font-semibold text-white border-2 shadow-scheme1-shadow backdrop-blur-2xl
                                overflow-hidden transition-all duration-300 ease-in-out"
                   >
-                    {/* Tło animowane */}
                     <span className="absolute top-0 left-0 w-0 h-full bg-white transition-all duration-300 ease-in-out group-hover:w-full z-0"></span>
-                    
-                    {/* Tekst przycisku */}
                     <span className="relative z-10 transition-colors duration-300 group-hover:text-[#121212]">
                       {buttonText}
                     </span>
                   </button>
                 </div>
               </div>
-
-              {/* Status wiadomości */}
               {status.message && (
                 <div className="mt-4">
                   <p className={`text-lg font-medium ${status.success === false ? "text-red-500" : "text-green-500"}`}>
@@ -231,7 +216,7 @@ const Contact: React.FC = () => {
           </motion.div>
           
       </div>
-    </section>
+</section>
   );
 }
 

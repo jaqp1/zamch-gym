@@ -64,7 +64,7 @@ function App() {
         transition={{duration: 0.4}}
         >
           {currentOutlet}
-          <button onClick={scrollToTop} id="backToTop" className={`fixed opacity-0 pointer-events-none md:pointer-events-auto bottom-15 right-20 z-[9999] w-10 h-10 transition-all duration-300 hover:opacity-80 ${isVisible ? `md:opacity-50 md:pointer-events-auto` : `md:opacity-0 md:pointer-events-none`}`}><img src={CarretUp}></img></button>
+          <button onClick={scrollToTop} id="backToTop" className={`fixed opacity-0 pointer-events-none md:pointer-events-auto bottom-20 right-20 z-[9999] w-10 h-10 transition-all duration-300 hover:opacity-80 ${isVisible ? `md:opacity-50 md:pointer-events-auto` : `md:opacity-0 md:pointer-events-none`}`}><img src={CarretUp}></img></button>
         </motion.main>
       </AnimatePresence>
     </div>

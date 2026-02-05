@@ -44,57 +44,154 @@ function About() {
       </video>
         {/* <div className='fixed left-0 right-0 bottom-0 h-120 w-full bg-linear-to-t from-black z-20'></div> */}
       </div>
-      <div className='min-h-screen bg-zinc-900 w-full gap-2 z-20 flex flex-col py-5 text-black'>
-        <h1 className='mx-5 mt-8 text-2xl font-semibold text-white'>Poznaj naszą siłownię </h1>
-        <h2 className='mx-5 text-md font-semibold text-zinc-500 mb-8'>Mamy wszystko, co potrzebne, żeby zrobić formę życia.</h2>
-        <div className='relative h-120 m-5 rounded-2xl bg-cover flex flex-col items-start justify-end ' style={{backgroundImage: `url(${wolneCiezary})`}}>
-          <h2 className='text-white z-30 px-5 text-2xl font-semibold'>Wolne ciężary</h2>
-          <ol className='text-xs m-5 text-white z-30'>
-            <li>Obciążenia typu bumper</li>
-            <li>Sztangi olimpijskie</li>
-            <li>Ławki treninogowe</li>
-            <li>Stojaki na sztangę</li>
-            <li>Zestaw regulowanych hantli</li>
-          </ol>
-          {/* <img src={classic}></img> */}
-          <div className='absolute left-0 bottom-0 w-full h-40 bg-linear-to-t rounded-b-2xl from-black'></div>
+      import { motion } from 'framer-motion';
+
+// ... reszta Twoich importów (zdjęcia itp.)
+
+return (
+    <div className='min-h-screen bg-zinc-900 w-full gap-5 z-20 flex flex-col py-5 text-black md:gap-20 md:px-20 lg:px-40'>
+      
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="md:text-center md:mt-10 md:mb-5"
+      >
+        <h1 className='mx-5 mt-8 text-2xl font-semibold text-white md:text-5xl md:mx-0'>Poznaj naszą siłownię</h1>
+        <h2 className='mx-5 text-md font-semibold text-zinc-500 mb-8 md:text-xl md:mx-0'>Mamy wszystko, co potrzebne, żeby zrobić formę życia.</h2>
+      </motion.div>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col md:flex-row md:items-center md:gap-10"
+      >
+        <div className='relative h-120 m-5 rounded-2xl bg-cover flex flex-col items-start justify-end md:m-0 md:w-1/2 md:h-96 md:shadow-2xl md:shadow-white/5' style={{backgroundImage: `url(${wolneCiezary})`}}>
+          <div className="md:hidden w-full">
+             <h2 className='text-white z-30 px-5 text-2xl font-semibold relative'>Wolne ciężary</h2>
+             <ul className='text-xs m-5 text-white z-30 relative list-disc list-inside'>
+               <li>Obciążenia typu bumper</li>
+               <li>Sztangi olimpijskie</li>
+               <li>Ławki treningowe</li>
+               <li>Stojaki na sztangę</li>
+               <li>Zestaw regulowanych hantli</li>
+             </ul>
+             <div className='absolute left-0 bottom-0 w-full h-40 bg-gradient-to-t rounded-b-2xl from-black'></div>
+          </div>
         </div>
-        <div className='relative h-120 m-5 rounded-2xl bg-cover flex flex-col items-start justify-end ' style={{backgroundImage: `url(${cardio})`}}>
-          <h2 className='text-white z-30 px-5 text-2xl font-semibold'>Strefa cardio</h2>
-          <ol className='text-xs m-5 text-white z-30'>
-            <li>Bieżnia</li>
-            <li>Orbitrek</li>
-            <li>Rowerek stacjonarny</li>
-            <li>Skakanki</li>
-          </ol>
-          {/* <img src={classic}></img> */}
-          <div className='absolute left-0 bottom-0 w-full h-40 bg-linear-to-t rounded-b-2xl from-black'></div>
+
+        <div className="hidden md:flex flex-col w-1/2 text-left p-4">
+            <h2 className='text-white text-4xl font-bold mb-4'>Wolne ciężary</h2>
+            <ul className='text-gray-300 text-lg space-y-2 list-disc list-inside'>
+               <li>Obciążenia typu bumper</li>
+               <li>Sztangi olimpijskie</li>
+               <li>Ławki treningowe</li>
+               <li>Stojaki na sztangę</li>
+               <li>Zestaw regulowanych hantli</li>
+            </ul>
         </div>
-        <div className='relative h-120 m-5 rounded-2xl bg-cover flex flex-col items-start justify-end ' style={{backgroundImage: `url(${cross})`}}>
-          <h2 className='text-white z-30 px-5 text-2xl font-semibold'>CrossFit & Trening Funkcjonalny</h2>
-          <ol className='text-xs m-5 text-white z-30'>
-            <li>Brama treningowa</li>
-            <li>Opona treningowa</li>
-            <li>Linia battle rope</li>
-            <li>Kamizelka obciążeniowa</li>
-            <li>Zestaw gum oporowych</li>
-            <li>Lina</li>
-          </ol>
-          {/* <img src={classic}></img> */}
-          <div className='absolute left-0 bottom-0 w-full h-40 bg-linear-to-t rounded-b-2xl from-black'></div>
+      </motion.div>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col md:flex-row-reverse md:items-center md:gap-10"
+      >
+        <div className='relative h-120 m-5 rounded-2xl bg-cover flex flex-col items-start justify-end md:m-0 md:w-1/2 md:h-96 md:shadow-2xl md:shadow-white/5' style={{backgroundImage: `url(${cardio})`}}>
+          <div className="md:hidden w-full">
+            <h2 className='text-white z-30 px-5 text-2xl font-semibold relative'>Strefa cardio</h2>
+            <ul className='text-xs m-5 text-white z-30 relative list-disc list-inside'>
+              <li>Bieżnia</li>
+              <li>Orbitrek</li>
+              <li>Rowerek stacjonarny</li>
+              <li>Skakanki</li>
+            </ul>
+            <div className='absolute left-0 bottom-0 w-full h-40 bg-gradient-to-t rounded-b-2xl from-black'></div>
+          </div>
         </div>
-        <div className='relative h-120 m-5 rounded-2xl bg-cover flex flex-col items-start justify-end mb-25' style={{backgroundImage: `url(${street})`}}>
-          <h2 className='text-white z-30 px-5 text-2xl font-semibold'>Street Workout & Kalistenika </h2>
-          <ol className='text-xs m-5 text-white z-30'>
-            <li>Dwa stanowiska do dipów</li>
-            <li>Drążki w różnych konfiguracjach</li>
-          </ol>
-          {/* <img src={classic}></img> */}
-          <div className='absolute left-0 bottom-0 w-full h-40 bg-linear-to-t rounded-b-2xl from-black'></div>
+
+        <div className="hidden md:flex flex-col w-1/2 text-left p-4">
+            <h2 className='text-white text-4xl font-bold mb-4'>Strefa cardio</h2>
+            <ul className='text-gray-300 text-lg space-y-2 list-disc list-inside'>
+               <li>Bieżnia</li>
+               <li>Orbitrek</li>
+               <li>Rowerek stacjonarny</li>
+               <li>Skakanki</li>
+            </ul>
         </div>
-      </div>
+      </motion.div>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col md:flex-row md:items-center md:gap-10"
+      >
+        <div className='relative h-120 m-5 rounded-2xl bg-cover flex flex-col items-start justify-end md:m-0 md:w-1/2 md:h-96 md:shadow-2xl md:shadow-white/5' style={{backgroundImage: `url(${cross})`}}>
+          <div className="md:hidden w-full">
+            <h2 className='text-white z-30 px-5 text-2xl font-semibold relative'>CrossFit & Trening Funkcjonalny</h2>
+            <ul className='text-xs m-5 text-white z-30 relative list-disc list-inside'>
+              <li>Brama treningowa</li>
+              <li>Opona treningowa</li>
+              <li>Linia battle rope</li>
+              <li>Kamizelka obciążeniowa</li>
+              <li>Zestaw gum oporowych</li>
+              <li>Lina</li>
+            </ul>
+            <div className='absolute left-0 bottom-0 w-full h-40 bg-gradient-to-t rounded-b-2xl from-black'></div>
+          </div>
+        </div>
+
+        <div className="hidden md:flex flex-col w-1/2 text-left p-4">
+            <h2 className='text-white text-4xl font-bold mb-4'>CrossFit & Trening Funkcjonalny</h2>
+            <ul className='text-gray-300 text-lg space-y-2 list-disc list-inside'>
+              <li>Brama treningowa</li>
+              <li>Opona treningowa</li>
+              <li>Linia battle rope</li>
+              <li>Kamizelka obciążeniowa</li>
+              <li>Zestaw gum oporowych</li>
+              <li>Lina</li>
+            </ul>
+        </div>
+      </motion.div>
+
+      <motion.div 
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col md:flex-row-reverse md:items-center md:gap-10 mb-20"
+      >
+        <div className='relative h-120 m-5 rounded-2xl bg-cover flex flex-col items-start justify-end md:m-0 md:w-1/2 md:h-96 md:shadow-2xl md:shadow-white/5' style={{backgroundImage: `url(${street})`}}>
+          <div className="md:hidden w-full">
+            <h2 className='text-white z-30 px-5 text-2xl font-semibold relative'>Street Workout & Kalistenika</h2>
+            <ul className='text-xs m-5 text-white z-30 relative list-disc list-inside'>
+              <li>Dwa stanowiska do dipów</li>
+              <li>Drążki w różnych konfiguracjach</li>
+            </ul>
+            <div className='absolute left-0 bottom-0 w-full h-40 bg-gradient-to-t rounded-b-2xl from-black'></div>
+          </div>
+        </div>
+
+        <div className="hidden md:flex flex-col w-1/2 text-left p-4">
+            <h2 className='text-white text-4xl font-bold mb-4'>Street Workout & Kalistenika</h2>
+            <ul className='text-gray-300 text-lg space-y-2 list-disc list-inside'>
+              <li>Dwa stanowiska do dipów</li>
+              <li>Drążki w różnych konfiguracjach</li>
+            </ul>
+        </div>
+      </motion.div>
+
+</div>
+)
     <div 
-        className='fixed flex flex-row items-end left-0 right-0 bottom-0 h-40 w-full bg-linear-to-t from-black z-50 p-5 pointer-events-none'
+        className='fixed flex flex-row items-end left-0 right-0 bottom-0 h-40 md:h-30 w-full bg-linear-to-t from-black z-50 p-5 pointer-events-none'
         >
           <motion.div
           className='flex flex-row w-full items-end'
@@ -106,7 +203,7 @@ function About() {
             <p className='text-gray-400 font-semibold text-xs p-3'>
               OSP Zamch
             </p>
-            <p className='text-gray-400 font-semibold text-xs p-3 justify-end ml-auto'>
+            <p className='text-gray-400 text-right font-semibold text-xs p-3 justify-end ml-auto'>
               © 2026 Wszelkie prawa zastrzeżone.
             </p>
           </motion.div>
