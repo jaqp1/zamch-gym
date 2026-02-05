@@ -43,8 +43,16 @@ function Home() {
 
 
   return (
-    <section className='min-h-svh sticky bg-cover flex flex-col items-center justify-center text-white bg-fixed bg-no-repeat bg-[50%_100%] md:bg-[0%_0%]'  style={{backgroundImage: `url(${bg})`}}>
-      
+    <section className='sticky flex flex-col items-center justify-center text-white'  >
+      <div 
+        className='fixed top-0 left-0 w-full h-full -z-10'
+        style={{backgroundImage: `url(${bg})`}}>
+          <img
+            src={bg}
+            alt="Background"
+            className='w-full h-full object-cover'
+          ></img>
+      </div>
       <motion.div className='p-4 absolute inset-0 z-10  rounded-md flex flex-col  gap-4 sm:flex-wrap backdrop-blur-md w-full h-full' style={{ opacity: blurOpacity}}>
       </motion.div>
       <div className='p-4 absolute inset-0 z-9 pointer-events-none w-full h-full bg-black opacity-50' >

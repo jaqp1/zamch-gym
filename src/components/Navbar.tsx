@@ -17,10 +17,10 @@ export const Navbar = () => {
   return (
     <div className={`nav z-9999 fixed left-0 right-0 flex justify-between align-center mx-10 xl:mx-14 my-10 xl:my-10 text-white mb-0 bg-transparent`}>
         <div className='flex items-end z-9999'>
-          <NavLink to='/home' className=' nav-logo '><img src={Logo} className='h-12 w-auto  md:h-18 xl:h-22'></img></NavLink>
+          <NavLink to='/' className=' nav-logo '><img src={Logo} className='h-12 w-auto  md:h-18 xl:h-22'></img></NavLink>
           </div>
         <ul className="hidden md:flex items-center list-none gap-0 xl:gap-2 text-xs md:text-sm xl:text-base ">
-            <li><NavLink to='/home' className={({ isActive }) =>
+            <li><NavLink to='/' className={({ isActive }) =>
               isActive 
               ? 'rounded-3xl py-1 px-4 md:py-2 md:px-8  bg-neutral-200 text-neutral-700' 
               : 'rounded-3xl py-1 px-4 md:py-2 md:px-8 bg-transparent  '
@@ -51,7 +51,7 @@ export const Navbar = () => {
         </button>
         <div id='mobileMenu' className='hidden fixed top-0 right-0 left-0 p-7 pt-32  rounded-2xl md:hidden z-40  bg-black/50 backdrop-blur-xl '>
             <ul className="flex flex-col items-center list-none gap-6 text-xs md:text-sm xl:text-base ">
-              <li><NavLink to='/home' className={({ isActive }) =>
+              <li><NavLink to='/' className={({ isActive }) =>
                 isActive 
                 ? 'rounded-3xl py-1 px-4 md:py-2 md:px-8  bg-neutral-200 text-neutral-700' 
                 : 'rounded-3xl py-1 px-4 md:py-2 md:px-8 bg-transparent  '
