@@ -57,22 +57,32 @@ function Home() {
       </motion.div>
       <div className='p-4 absolute inset-0 z-9 pointer-events-none w-full h-full bg-black opacity-50' >
       </div>
-      <div className='w-full min-h-screen flex flex-col p-10 items-center justify-start pt-40 z-50'>
-        <div className={`h-auto w-auto duration-300 ${isVisible ? ` md:pointer-events-auto` : `opacity-0 md:pointer-events-none`}`}>
-          <h1 className='text-4xl text-center font-semibold'>Twoja sportowa przygoda <br />zaczyna się tutaj</h1>
+      <div className='w-full min-h-screen flex flex-col px-10 items-center justify-start pt-60 z-50'>
+        <div className={`h-auto mb-10 w-auto duration-300 ${isVisible ? ` md:pointer-events-auto` : `opacity-0 md:pointer-events-none`}`}>
+          <h1 className="font-black uppercase italic leading-tight drop-shadow-xl">
+            <span className="block text-3xl md:text-5xl text-white">
+              Twoja sportowa
+            </span>
+            <span className="block text-5xl md:text-8xl bg-gradient-to-r from-white via-gray-200 to-gray-500 bg-clip-text text-transparent my-1">
+              PRZYGODA
+            </span>
+            <span className="block text-2xl md:text-4xl text-white">
+              zaczyna się tutaj
+            </span>
+          </h1>
         </div>
         <button onClick={scrollToSection} className={`my-auto relative duration-300  ${isVisible ? ` md:pointer-events-auto` : `opacity-0 md:pointer-events-none`}`}>
             <img src={downArrow}  className='w-20 pointer-events-auto '></img>
         </button>
       </div>    
       <div ref={secondSectionRef} className='w-full flex flex-col p-8 z-50 min-h-screen my-auto pointer-events-auto'>
-        <h2 className='self-start mt-30 text-3xl font-semibold'>Witamy na naszej siłowni!</h2><br />
+        <h2 className='self-start mt-15 text-3xl font-semibold'>Witamy na naszej siłowni!</h2><br />
         <h3 className='text-gray-400 text-sm'>Jedyne takie miejsce w okolicy. Stworzone przez mieszkańców - dla mieszkańców. Bez karnetów, bez zbędnych formalności – po prostu przyjdź i trenuj</h3><br />
         <p className='text-sm text-gray-400'>Na naszej siłowni każdy znajdzie coś dla siebie. Niezależnie od tego czy chcesz zostać mistrzem trójboju czy po prostu chcesz na chwilę odejsć od komputera i rozruszać organizm. U nas znajdziesz sprzęt, który sprosta twoim wymaganiom.</p>
           <NavLink to='/about' className={`mt-8 bg-white rounded-2xl text-black justify-center p-1 flex flex-row gap-2 font-semibold`}>O siłowni<img src={rightArrow} className='w-5'></img></NavLink>
       </div>
       <div className='w-full flex flex-col p-8 z-50 min-h-screen my-auto'>
-        <h2 className='self-start mt-20 text-3xl font-semibold'>Aktualności</h2><br />
+        <h2 className='self-start  text-3xl font-semibold'>Aktualności</h2><br />
         <h3 className='text-white text-sm'>Skandaliczny wybryk <br /> dwóch szczurasów</h3><br/>
         <video 
         autoPlay 
@@ -104,7 +114,7 @@ function Home() {
             <p className='text-gray-400 font-semibold text-xs p-3'>
               OSP Zamch
             </p>
-            <p className='text-gray-400 font-semibold text-xs p-3 justify-end ml-auto'>
+            <p className='text-gray-400 text-right font-semibold text-xs p-3 justify-end ml-auto'>
               © 2026 Wszelkie prawa zastrzeżone.
             </p>
           </motion.div>
