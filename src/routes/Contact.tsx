@@ -96,11 +96,10 @@ const Contact: React.FC = () => {
 
   return (
     <section 
-      className="p-5" 
+      className="p-5 relative" 
       id="connect"
     >
-      <div className='fixed left-0 right-0 top-0 h-40 w-full bg-gradient-to-b from-black z-50'></div>
-       <div className='fixed left-0 right-0 top-0 h-18 w-full shadow-[0_10px_60px_40px_rgba(0,0,0,1)] bg-black z-50'></div>
+       <div className='fixed left-0 right-0 top-0 h-25 w-full shadow-[0_10px_60px_40px_rgba(0,0,0,1)] bg-black z-50'></div>
       <div className=" mb-20 px-4 max-w-7xl bg-zinc-950 border-1 border-zinc-700 rounded-2xl  mt-30 pb-15 sm:mt-[8%]">
         <div className="flex flex-col md:flex-row  items-center justify-between gap-10">
           
