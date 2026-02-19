@@ -44,11 +44,6 @@ function About() {
       </video>
         {/* <div className='fixed left-0 right-0 bottom-0 h-120 w-full bg-linear-to-t from-black z-20'></div> */}
       </div>
-      import { motion } from 'framer-motion';
-
-// ... reszta Twoich importów (zdjęcia itp.)
-
-return (
     <div className='min-h-screen bg-zinc-900 w-full gap-5 z-20 flex flex-col py-5 text-black md:gap-20 md:px-20 lg:px-40'>
       
       <motion.div 
@@ -189,7 +184,6 @@ return (
       </motion.div>
 
 </div>
-)
     <div 
         className='fixed flex flex-row items-end left-0 right-0 bottom-0 h-40 md:h-30 w-full bg-linear-to-t from-black z-50 p-5 pointer-events-none'
         >

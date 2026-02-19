@@ -92,7 +92,7 @@ function Home() {
         <div className='flex flex-col w-full md:w-1/2'>
           <h2 className='text-3xl font-semibold'>Witamy na naszej siłowni!</h2>
           <h3 className='text-gray-400 text-sm mt-4 mb-2'>
-              Jedyne takie miejsce w okolicy. Stworzone przez mieszkańców - dla mieszkańców. Bez karnetów, bez zbędnych formalności – po prostu przyjdź i trenuj
+              Jedyne takie miejsce w okolicy. Stworzone przez mieszkańców - dla mieszkańców. Bez karnetów, bez zbędnych formalności - po prostu przyjdź i trenuj
           </h3>
           
           <p className='text-sm text-gray-400 mb-6'>
