@@ -86,7 +86,7 @@ function Home() {
         <img
           src={tearedPhoto}
           alt="Siłownia"
-          className="w-full h-auto object-cover rounded-xl shadow-lg" // Dodatkowe style dla ładnego wyglądu zdjęcia
+          className="w-full h-auto opacity-0 md:opacity-100 object-cover rounded-xl shadow-lg" 
         />
         </div>
         <div className='flex flex-col w-full md:w-1/2'>

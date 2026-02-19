@@ -2,6 +2,7 @@ import SectionWraper from './SectionWraper'
 import { SCHEMES, WORKOUTS } from '../utils/swoldier'
 import { useState } from 'react'
 import Button from './Button'
+import { motion } from 'motion/react'
 
 interface HeaderProps {
   index: string;
@@ -74,31 +75,42 @@ export default function Generator(props: GeneratorProps) {
         <div className='grid grid-cols-2 sm:grid-cols-4 gap-4 '>
         {Object.keys(WORKOUTS).map((type, typeIndex) => {
             return (
-              <button onClick={() => {
+              <motion.button 
+              onClick={() => {
                 setMuscles([])
                 setPoison(type)
-              }}  className={`bg-scheme1-600 border-2 px-4 py-3 rounded-lg duration-200 hover:border-scheme1-900 backdrop-blur-2xl ${type === poison ? 'border-scheme1-900' : 'border-scheme1-700'}`} key={typeIndex}>
+              }}  
+              whileTap={{
+                        scale: 0.7,
+                        y: 1
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                duration: 0.5
+              }}
+              className={`bg-scheme1-600 border-2 px-4 py-3 rounded-lg duration-200 hover:border-scheme1-900 backdrop-blur-2xl ${type === poison ? 'bg-white text-black' : ''}`} key={typeIndex}>
 
                   <p className='capitalize'>{type.replace(/_/g, " ")}</p>
-              </button>
+              </motion.button>
             )
         })}
         </div>
         <Header index={'02'} title={'Partie mięśniowe'} description={"Wybierz interesujące cię partie mięśniowe."}></Header>
         <div className='bg-scheme1-600 border-2 border-solid border-scheme1-700 rounded-lg flex flex-col hover:border-scheme1-800 duration-200 backdrop-blur-2xl'>
-            <button onClick={toggleModal} className='relative flex items-center justify-center p-3 '>
-                <p className='first-letter:uppercase'>{muscles.length === 0 ? 'wybierz partie mięśniowe' : muscles.join(' ')}</p>
+            <motion.button onClick={toggleModal} className={`relative flex items-center justify-center p-3 ${muscles.length === 3 ? 'bg-white text-black' : ''}`}>
+                <p className='first-letter:uppercase' >{muscles.length === 0 ? 'wybierz partie mięśniowe' : muscles.join(' ')}</p>
                 <i className="absolute right-3 top-1/2 -translate-y-1/2 fa-solid fa-caret-down"></i>
-            </button>
+            </motion.button>
             {showModal && (
               <div className='flex flex-col px-3 pb-3'>
                   {(poison === 'indywidualny' ? WORKOUTS[poison] : Object.keys(WORKOUTS[poison as keyof typeof WORKOUTS])).map((muscleGroup,muscleGroupIndex) => {
                     return (
-                      <button onClick={() => {
+                      <motion.button onClick={() => {
                           updateMuscles(muscleGroup)
                       }} key={muscleGroupIndex} className={`hover:text-scheme1-900 text-scheme1-700 duration-200 ${muscles.includes(muscleGroup) ? 'text-scheme1-900' : '' }`}>
                           <p className='uppercase '>{muscleGroup.replace(/_/g, " ")}</p>
-                      </button>
+                      </motion.button>
                     )
                   })}
               </div>
@@ -108,12 +120,23 @@ export default function Generator(props: GeneratorProps) {
         <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
         {Object.keys(SCHEMES).map((scheme, schemeIndex) => {
             return (
-              <button onClick={() => {
+              <motion.button 
+              onClick={() => {
                 setGoal(scheme)
-              }}  className={`bg-scheme1-600 border-2 px-4 py-3 rounded-lg duration-200 hover:border-scheme1-900 backdrop-blur-2xl ${scheme === goal ? 'border-scheme1-900' : 'border-scheme1-700'}`} key={schemeIndex}>
+              }}  
+              whileTap={{
+                        scale: 0.7,
+                        y: 1
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 300,
+                duration: 0.5
+              }}
+              className={`bg-scheme1-600 border-2 px-4 py-3 rounded-lg duration-200 hover:border-scheme1-900 backdrop-blur-2xl ${scheme === goal ? 'bg-white text-black' : 'border-scheme1-700'}`} key={schemeIndex}>
 
                   <p className='capitalize'>{scheme.replace(/_/g, " ")}</p>
-              </button>
+              </motion.button>
             )
         })}
         </div>
