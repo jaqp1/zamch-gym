@@ -1,6 +1,6 @@
 # 🏋️‍♂️ Zamch Gym 
 
-**
+https://silowniazamch.netlify.app/
 
 ## 📖 O projekcie
 **Zamch Gym** to oficjalna strona internetowa siłowni przy WOK-u w miejscowości Zamch
