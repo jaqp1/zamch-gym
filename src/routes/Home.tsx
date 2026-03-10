@@ -117,7 +117,7 @@ function Home() {
   <div className="flex flex-col md:flex-row md:gap-16 md:items-start">
     <div className="w-full md:w-1/2">
       <h3 className='text-white text-sm md:hidden mb-4'>
-        Skandaliczny wybryk <br /> dwóch szczurasów
+        Skandaliczny wybryk <br /> dwóch osiłków
       </h3>
 
       <div className="relative overflow-hidden rounded-lg md:rounded-2xl shadow-none md:shadow-2xl md:shadow-white/5">
@@ -135,7 +135,7 @@ function Home() {
     </div>
       <div className="w-full md:w-1/2 flex flex-col justify-center">
         <h3 className='hidden md:block text-white text-3xl font-bold mb-6 leading-tight'>
-          Skandaliczny wybryk <br/> dwóch szczurasów
+          Skandaliczny wybryk <br/> dwóch osiłków
         </h3>
 
         <p className='text-xs mt-5 text-gray-400 mb-20 md:text-base md:text-gray-300 md:leading-relaxed lg:text-sm'>
